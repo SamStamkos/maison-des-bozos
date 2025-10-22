@@ -35,7 +35,7 @@ const Home: React.FC = () => {
         </div>
         <div className="grid grid-cols-6 gap-6 mt-24">
           <div className="relative col-span-3">
-            <div className="w-full h-64 rounded-xs overflow-hidden bg-gray-200">
+            <div className="aspect-video rounded-xs overflow-hidden">
               <img
                 src="/bozo.jpg"
                 alt="Maison des Bozos"
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
             </div>
           </div>
           <div className="relative col-span-3">
-            <div className="w-full h-64 rounded-xs overflow-hidden bg-gray-200">
+            <div className="aspect-video rounded-xs overflow-hidden">
               <img
                 src="/museee.jpg"
                 alt="Maison des Bozos"
