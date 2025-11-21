@@ -19,6 +19,8 @@
 @theme {
   --font-mono: 'Nocturne Mono', monospace;
   --color-primary: #212122;
+
+  --ease-out-quad: cubic-bezier(0.5, 1, 0.89, 1)
 }
 
 body {
@@ -28,6 +30,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.text-intro {
+  @apply text-[13px] leading-relaxed;
+  @apply text-primary;
+}
+
+.button-primary {
+  @apply text-sm tracking-widest;
+  @apply bg-transparent text-primary px-4 py-2 rounded-xs cursor-pointer;
+  @apply border border-primary;
+  @apply transition-all duration-100;
+
+  &:hover {
+    @apply bg-primary text-white;
+  }
 }
 
 code {

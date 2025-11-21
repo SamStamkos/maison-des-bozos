@@ -10,25 +10,22 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="border-b border-primary/20 mt-24">
+    <footer className="border-b border-primary/20 mt-48">
       <div className="max-w-screen-2xl px-12 mx-auto">
         <div className="flex justify-between items-end py-4 border-b border-primary/20">
           <div className="">
-            <p className="text-lg font-medium text-primary">
+            <p className="text-sm font-medium text-primary">
               {t('footer.email')}
             </p>
-            <p className="text-base font-medium text-primary whitespace-pre-line">
+            <p className="text-sm font-medium text-primary whitespace-pre-line">
               {t('footer.address')}
             </p>
           </div>
           <div className="flex space-x-4">
-            <a href="https://www.instagram.com/maisondesbozos/">
+            <a href="https://www.instagram.com/maisondesbozos/" target="_blank" rel="noopener noreferrer">
               <img src="/instagram-logo.svg" alt="Instagram" />
             </a>
-            <a href="https://www.tiktok.com/maisondesbozos/">
-              <img src="/tiktok-logo.svg" alt="TikTok" />
-            </a>
-            <a href="https://www.facebook.com/maisondesbozos/">
+            <a href="https://www.facebook.com/maisondesbozos/" target="_blank" rel="noopener noreferrer">
               <img src="/facebook-logo.svg" alt="Facebook" />
             </a>
           </div>
