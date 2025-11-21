@@ -23,14 +23,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <img
         src={images[prevIndex]}
         alt={alt}
-        className="absolute inset-0 w-full h-full object-contain bg-black"
+        className="absolute inset-0 w-full h-full object-contain bg-black rounded-2xl"
       />
       {/* New image (on top with clip-path animation) */}
       <img
         ref={newImageRef}
         src={images[currentIndex]}
         alt={alt}
-        className="absolute inset-0 w-full h-full object-contain bg-black"
+        className="absolute inset-0 w-full h-full object-contain bg-black rounded-2xl"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
       />
     </div>

@@ -63,8 +63,9 @@ const IntroSection: React.FC = () => {
     // Parallax effect on scroll - text moves down
     if (introTextRef.current) {
       // Ensure text starts at correct position
-      gsap.set(introTextRef.current, { y: 0 });
+      gsap.set(introTextRef.current, { y: 0, opacity: 1 });
 
+      // Text moves down throughout the scroll
       gsap.to(introTextRef.current, {
         y: 700,
         ease: "none",
@@ -72,6 +73,19 @@ const IntroSection: React.FC = () => {
           trigger: introImageRef.current,
           start: "top top",
           end: "bottom top",
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      // Text fades out in the last 80% of the scroll
+      gsap.to(introTextRef.current, {
+        opacity: 0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: introImageRef.current,
+          start: "top top",
+          end: "70% top",
           scrub: true,
           invalidateOnRefresh: true,
         },
@@ -99,9 +113,11 @@ const IntroSection: React.FC = () => {
     <div className="max-w-screen-2xl px-4 md:px-12 mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
         <div className="relative col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-7 order-2 md:order-1">
-          <div className="relative col-span-1 md:col-span-6 md:col-start-1 w-full aspect-square md:aspect-[3/3.5] self-center overflow-hidden rounded-xs">
+          <div
+            ref={introImageRef}
+            className="relative col-span-1 md:col-span-6 md:col-start-1 w-full aspect-square md:aspect-[3/3.5] self-center overflow-hidden rounded-2xl"
+          >
             <img
-              ref={introImageRef}
               src="/header.jpeg"
               alt="Bozo"
               className="w-full h-full object-cover origin-center"
@@ -119,7 +135,7 @@ const IntroSection: React.FC = () => {
           ref={introTextRef}
           className="col-span-1 md:col-span-7 px-0 md:px-12 self-center order-1 md:order-2 mb-12 md:mb-0"
         >
-          <div className="space-y-4">
+          <div className="space-y-4 px-4">
             <Typewriter
               text={t("home.title")}
               as="h1"

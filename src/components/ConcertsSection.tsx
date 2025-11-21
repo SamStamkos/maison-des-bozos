@@ -17,7 +17,7 @@ const ConcertsSection: React.FC = () => {
     animationDuration: 1.8,
   });
 
-  // ScrollTrigger to start carousel when section hits viewport center
+  // ScrollTrigger to start carousel when section hits viewport (runs forever once triggered)
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -25,7 +25,7 @@ const ConcertsSection: React.FC = () => {
       trigger: sectionRef.current,
       start: "top center",
       onEnter: () => setIsActive(true),
-      onLeaveBack: () => setIsActive(false),
+      once: true, // Only trigger once, then carousel runs forever
     });
 
     return () => {
@@ -34,23 +34,26 @@ const ConcertsSection: React.FC = () => {
   }, [setIsActive]);
 
   return (
-    <div ref={sectionRef} className="relative bg-white z-10 h-screen py-12">
-      <div className="absolute inset-y-0 right-12 flex items-center justify-end w-7/10">
+    <div ref={sectionRef} className="relative bg-white z-10 py-12 md:h-screen">
+      {/* Mobile: stacked layout, Desktop: absolute positioning */}
+      <div className="px-4 md:px-0 md:absolute md:inset-y-0 md:right-12 flex items-center justify-end md:w-7/10">
         <ImageCarousel
           images={CONCERTS_IMAGES}
           currentIndex={currentIndex}
           prevIndex={prevIndex}
           newImageRef={newImageRef}
           alt="Concerts"
-          className="w-full aspect-[5/3]"
+          className="w-full aspect-square md:aspect-[5/3]"
         />
       </div>
-      <SectionCard
-        title={t("home.concerts.title")}
-        descriptions={[t("home.concerts.description"), t("home.concerts.description")]}
-        buttonText={t("home.concerts.button")}
-        position="left"
-      />
+      <div className="mt-8 md:mt-0 md:h-full">
+        <SectionCard
+          title={t("home.concerts.title")}
+          descriptions={[t("home.concerts.description"), t("home.concerts.description")]}
+          buttonText={t("home.concerts.button")}
+          position="left"
+        />
+      </div>
     </div>
   );
 };

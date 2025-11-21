@@ -18,7 +18,7 @@ const MuseumSection: React.FC = () => {
       animationDuration: 1.8,
     });
 
-  // ScrollTrigger to start carousel when section hits viewport center
+  // ScrollTrigger to start carousel when section hits viewport (runs forever once triggered)
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -26,7 +26,7 @@ const MuseumSection: React.FC = () => {
       trigger: sectionRef.current,
       start: "top center",
       onEnter: () => setIsActive(true),
-      onLeaveBack: () => setIsActive(false),
+      once: true, // Only trigger once, then carousel runs forever
     });
 
     return () => {
@@ -37,25 +37,28 @@ const MuseumSection: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative bg-white z-10 w-full h-screen py-12"
+      className="relative bg-white z-10 w-full py-12 md:h-screen"
     >
-      <div className="absolute inset-y-0 left-12 flex items-center justify-end w-7/10">
+      {/* Mobile: stacked layout, Desktop: absolute positioning */}
+      <div className="px-4 md:px-0 md:absolute md:inset-y-0 md:left-12 flex items-center justify-end md:w-7/10">
         <ImageCarousel
           images={MUSEUM_IMAGES}
           currentIndex={currentIndex}
           prevIndex={prevIndex}
           newImageRef={newImageRef}
           alt="Museum"
-          className="w-full aspect-[5/3]"
+          className="w-full aspect-square md:aspect-[5/3]"
         />
       </div>
-      <SectionCard
-        buttonDataGroup="14982"
-        title={t("home.musee.title")}
-        descriptions={[t("home.musee.description")]}
-        buttonText={t("home.musee.button")}
-        position="right"
-      />
+      <div className="mt-8 md:mt-0 md:h-full">
+        <SectionCard
+          buttonDataGroup="14982"
+          title={t("home.musee.title")}
+          descriptions={[t("home.musee.description")]}
+          buttonText={t("home.musee.button")}
+          position="right"
+        />
+      </div>
     </div>
   );
 };

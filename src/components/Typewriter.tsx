@@ -9,6 +9,7 @@ interface TypewriterProps {
   onComplete?: () => void;
   onHalfway?: () => void;
   fadeInDuration?: number;
+  enabled?: boolean;
 }
 
 const Typewriter: React.FC<TypewriterProps> = ({
@@ -20,6 +21,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
   onComplete,
   onHalfway,
   fadeInDuration = 400,
+  enabled = true,
 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,6 +29,9 @@ const Typewriter: React.FC<TypewriterProps> = ({
   const [halfwayTriggered, setHalfwayTriggered] = useState(false);
 
   useEffect(() => {
+    // Don't start if not enabled
+    if (!enabled) return;
+
     // Handle initial delay
     if (!isStarted && delay > 0) {
       const delayTimer = setTimeout(() => {
@@ -36,7 +41,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
     } else if (!isStarted) {
       setIsStarted(true);
     }
-  }, [delay, isStarted]);
+  }, [delay, isStarted, enabled]);
 
   useEffect(() => {
     if (!isStarted) return;
