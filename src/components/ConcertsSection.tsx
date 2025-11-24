@@ -32,7 +32,7 @@ const ConcertsSection: React.FC = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top 10%",
-          toggleActions: "play reverse play reverse",
+          // toggleActions: "play reverse play reverse",
         },
       });
     }, sectionRef);
