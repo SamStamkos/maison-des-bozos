@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         <div className="flex justify-between items-end py-4 border-b border-primary/20">
           <div className="">
             <p className="text-sm font-medium text-primary">
-              {t('footer.email')}
+              <a href={`mailto:${t('footer.email')}`}>{t('footer.email')}</a>
             </p>
             <p className="text-sm font-medium text-primary whitespace-pre-line">
               {t('footer.address')}
