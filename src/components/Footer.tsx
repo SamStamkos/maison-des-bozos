@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-between items-center py-2">
+        <div className="flex justify-end items-center py-2">
           <p className="text-xs text-primary">{t('footer.copyright')}</p>
-          <div className="flex space-x-4">
+          {/* <div className="flex space-x-4">
             <a href={getRoute('/')} className="text-xs text-primary">
               {t('footer.privacy')}
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
