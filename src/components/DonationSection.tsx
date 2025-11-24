@@ -44,7 +44,7 @@ const DonationSection: React.FC = () => {
   }, [isInView]);
 
   return (
-    <section ref={sectionRef} className="relative mt-40 mx-4 md:mx-12">
+    <section ref={sectionRef} className="relative mt-20 md:mt-40 mx-4 md:mx-12">
       <div className="w-full md:w-3/4 flex flex-col items-start gap-4">
         <Typewriter
           text={t("home.donation.title")}

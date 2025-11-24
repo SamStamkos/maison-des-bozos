@@ -17,6 +17,12 @@ const IntroSection: React.FC = () => {
   useEffect(() => {
     if (!introImageRef.current) return;
 
+    // Disable browser scroll restoration and scroll to top
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
+
     // Curtain drop animation
     if (curtainRef.current) {
       gsap.fromTo(
@@ -92,8 +98,8 @@ const IntroSection: React.FC = () => {
       });
     }
 
-    // Scroll to top on initial load to ensure correct positioning
-    window.scrollTo(0, 0);
+    // Refresh ScrollTrigger after scroll position is set
+    ScrollTrigger.refresh();
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -110,12 +116,12 @@ const IntroSection: React.FC = () => {
   }, []);
 
   return (
-    <div className="max-w-screen-2xl px-4 md:px-12 mx-auto">
+    <div className="max-w-screen-2xl px-0 md:px-12 mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
-        <div className="relative col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-7 order-2 md:order-1">
+        <div className="relative col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-7 order-2 md:order-1 px-4 md:px-0">
           <div
             ref={introImageRef}
-            className="relative col-span-1 md:col-span-6 md:col-start-1 w-full aspect-square md:aspect-[3/3.5] self-center overflow-hidden rounded-2xl"
+            className="relative col-span-1 md:col-span-6 md:col-start-1 w-full aspect-[3/3.5] self-center overflow-hidden rounded-2xl"
           >
             <img
               src="/header.jpeg"
@@ -139,12 +145,12 @@ const IntroSection: React.FC = () => {
             <Typewriter
               text={t("home.title")}
               as="h1"
-              className="text-3xl md:text-2xl font-medium"
+              className="text-2xl font-medium whitespace-nowrap"
               speed={100}
               delay={200}
             />
             <p
-              className={`text-sm leading-relaxed text-justify transition-all duration-1000 ease-out-quad ${
+              className={`text-sm leading-relaxed md:text-justify transition-all duration-1000 ease-out-quad ${
                 showDescriptions
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -153,7 +159,7 @@ const IntroSection: React.FC = () => {
               {t("home.description1")}
             </p>
             <p
-              className={`text-sm leading-relaxed text-justify transition-all duration-1000 delay-300 ease-out-quad ${
+              className={`text-sm leading-relaxed md:text-justify transition-all duration-1000 delay-300 ease-out-quad ${
                 showDescriptions
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -163,7 +169,7 @@ const IntroSection: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 hidden md:block"></div>
       </div>
     </div>
   );
