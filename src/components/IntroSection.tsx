@@ -59,7 +59,7 @@ const IntroSection: React.FC = () => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: introImageRef.current,
-        start: "top top",
+        start: "center top",
         end: "bottom top",
         scrub: true,
         invalidateOnRefresh: true,
@@ -77,7 +77,7 @@ const IntroSection: React.FC = () => {
         ease: "none",
         scrollTrigger: {
           trigger: introImageRef.current,
-          start: "top top",
+          start: "15% top",
           end: "bottom top",
           scrub: true,
           invalidateOnRefresh: true,

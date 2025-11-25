@@ -46,7 +46,7 @@ const ConcertsSection: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative bg-white z-10 py-4 md:py-12 md:h-screen"
+      className="max-w-screen-2xl mx-auto relative bg-white z-10 py-4 md:py-12 md:h-screen"
     >
       {/* Mobile: stacked layout, Desktop: absolute positioning */}
       <div className="px-4 md:px-0 md:absolute md:inset-y-0 md:right-12 flex items-center justify-end md:w-7/10">

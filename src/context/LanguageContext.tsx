@@ -77,8 +77,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         en: "Discover our intimate concerts in a place steeped in history. A unique musical experience in the heart of Montreal.",
       },
       "home.musee.title": {
-        fr: "La maison historique des Bozos",
-        en: "An exceptional discovery of the historic Bozos house at 1208 Crescent.",
+        fr: "Le musée des Bozos",
+        en: "The Bozos Museum",
       },
       "home.musee.button": {
         fr: "Découvrir le Musée",
