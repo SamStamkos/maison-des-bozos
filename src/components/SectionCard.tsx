@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, ReactNode } from "react";
 import Typewriter from "./Typewriter";
 
 interface SectionCardProps {
   title: string;
-  descriptions: string[];
+  descriptions: (string | ReactNode)[];
   buttonText: string;
   buttonDataGroup?: string;
   className?: string;
@@ -67,7 +67,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`${positionClasses} px-4 md:px-8 py-6 bg-[#d8d0ca] flex flex-col items-start justify-start space-y-2 shadow-xl rounded-xl ${className}`}
+      className={`${positionClasses} px-4 md:px-8 py-6 bg-[#bda075] flex flex-col items-start justify-start space-y-2 shadow-xl rounded-xl ${className}`}
       style={{
         backgroundImage: `
           repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px),

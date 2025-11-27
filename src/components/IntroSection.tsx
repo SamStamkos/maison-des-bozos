@@ -12,6 +12,16 @@ const IntroSection: React.FC = () => {
   const introTextRef = useRef<HTMLDivElement>(null);
   const curtainRef = useRef<HTMLDivElement>(null);
   const [showDescriptions, setShowDescriptions] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Dynamically load all images from /public/intro directory
+  const galleryImages = [
+    "/intro/intro-1.jpg",
+    "/intro/intro-2.jpg",
+    "/intro/intro-3.jpg",
+    "/intro/intro-4.jpg",
+    "/intro/intro-5.jpg",
+  ];
 
   // GSAP animations for intro image
   useEffect(() => {
@@ -115,19 +125,35 @@ const IntroSection: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Gallery auto-switch every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        (prevIndex + 1) % galleryImages.length
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [galleryImages.length]);
+
   return (
     <div className="max-w-screen-2xl px-0 md:px-12 mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
-        <div className="relative col-span-1 md:col-span-5 grid grid-cols-1 md:grid-cols-7 order-2 md:order-1 px-4 md:px-0">
+        <div className="relative col-span-1 md:col-span-5 order-2 md:order-1 px-4 md:px-0">
           <div
             ref={introImageRef}
-            className="relative col-span-1 md:col-span-6 md:col-start-1 w-full aspect-[3/3.5] self-center overflow-hidden rounded-2xl"
+            className="relative w-full aspect-[3/3.5] self-center overflow-hidden rounded-2xl"
           >
-            <img
-              src="/header.jpeg"
-              alt="Bozo"
-              className="w-full h-full object-cover origin-center"
-            />
+            {galleryImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt="Bozo"
+                className={`absolute inset-0 w-full h-full object-contain origin-center transition-opacity duration-1000 ease-in-out ${
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
+                }`}
+              />
+            ))}
             {/* Curtain overlay */}
             <div
               ref={curtainRef}
@@ -143,7 +169,7 @@ const IntroSection: React.FC = () => {
         >
           <div className="space-y-4 px-4">
             <Typewriter
-              text={t("home.title")}
+              text={t("home.title") as string}
               as="h1"
               className="text-2xl font-medium whitespace-nowrap"
               speed={100}

@@ -45,9 +45,9 @@ const DonationSection: React.FC = () => {
 
   return (
     <section ref={sectionRef} className="relative mt-20 mx-4 md:mx-12">
-      <div className="w-full md:w-3/4 flex flex-col items-start gap-4">
+      <div className="w-full flex flex-col items-start gap-4">
         <Typewriter
-          text={t("home.donation.title")}
+          text={t("home.donation.title") as string}
           as="h2"
           className="text-2xl font-medium"
           speed={80}
@@ -55,7 +55,7 @@ const DonationSection: React.FC = () => {
           enabled={isInView}
         />
         <p
-          className={`text-sm leading-relaxed transition-all duration-1000 ease-out-quad ${
+          className={`text-sm w-full md:w-2/3 leading-relaxed transition-all duration-1000 ease-out-quad ${
             showContent
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
