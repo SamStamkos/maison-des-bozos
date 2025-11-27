@@ -128,8 +128,8 @@ const IntroSection: React.FC = () => {
   // Gallery auto-switch every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) =>
-        (prevIndex + 1) % galleryImages.length
+      setCurrentImageIndex(
+        (prevIndex) => (prevIndex + 1) % galleryImages.length
       );
     }, 4000);
 
@@ -183,15 +183,6 @@ const IntroSection: React.FC = () => {
               }`}
             >
               {t("home.description1")}
-            </p>
-            <p
-              className={`text-sm leading-relaxed md:text-justify transition-all duration-1000 delay-300 ease-out-quad ${
-                showDescriptions
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-10"
-              }`}
-            >
-              {t("home.description2")}
             </p>
           </div>
         </div>
