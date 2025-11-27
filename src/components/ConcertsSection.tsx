@@ -25,7 +25,7 @@ const ConcertsSection: React.FC = () => {
   useEffect(() => {
     if (!sectionRef.current || !secondImageRef.current) return;
 
-    let intervalId: NodeJS.Timeout;
+    let intervalId: number;
 
     // Create GSAP context for proper cleanup
     const ctx = gsap.context(() => {
