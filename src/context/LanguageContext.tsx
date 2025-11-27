@@ -57,7 +57,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "home.description1": {
         fr: (
           <>
-            Bienvenue… Chez Bozo! Au cœur du centre-ville de Montréal, à même le
+            Bienvenue… <span className="italic font-medium">Chez Bozo</span>! Au cœur du centre-ville de Montréal, à même le
             lieu historique de la toute première boîte à chansons d’Amérique,
             vient de naître et renaître{" "}
             <span className="italic font-medium">Chez Bozo</span>. Cet endroit
@@ -138,8 +138,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       // Footer
       "footer.email": {
-        fr: "direction@maisondesBozo.com",
-        en: "direction@maisondesBozo.com",
+        fr: "direction@maisondesbozo.com",
+        en: "direction@maisondesbozo.com",
       },
       "footer.address": {
         fr: "1208 Crescent St,\nMontreal, Quebec\nH3G 2A9",
