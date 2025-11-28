@@ -6,7 +6,12 @@ import SectionCard from "./SectionCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MUSEUM_IMAGES = ["/musee.jpg", "/musee-2.jpg"];
+const MUSEUM_IMAGES = [
+  "/musee/musee-1.jpg",
+  "/musee/musee-2.jpg",
+  "/musee/musee-3.jpg",
+  "/musee/musee-4.jpg",
+];
 
 const MuseumSection: React.FC = () => {
   const { t } = useLanguage();
