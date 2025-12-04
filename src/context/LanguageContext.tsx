@@ -48,7 +48,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       Record<Language, string | React.ReactNode>
     > = {
       // Navigation
-      "nav.title": { fr: "Maison des Bozo", en: "House of Bozo" },
+      "nav.title": { fr: "Maison des Bozos", en: "House of Bozos" },
 
       // Page titles
 
