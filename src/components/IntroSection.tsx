@@ -137,19 +137,19 @@ const IntroSection: React.FC = () => {
   }, [galleryImages.length]);
 
   return (
-    <div className="max-w-screen-2xl px-0 md:px-12 mx-auto">
+    <div className="max-w-screen-2xl mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
-        <div className="relative col-span-1 md:col-span-5 order-2 md:order-1 px-4 md:px-0">
+        <div className="relative col-span-1 md:col-span-5 order-2 md:order-1 md:px-0">
           <div
             ref={introImageRef}
-            className="relative w-full aspect-[3/3.5] self-center overflow-hidden rounded-2xl"
+            className="relative w-full h-full"
           >
             {galleryImages.map((image, index) => (
               <img
                 key={index}
                 src={image}
                 alt="Bozo"
-                className={`absolute inset-0 w-full h-full object-contain origin-center transition-opacity duration-1000 ease-in-out ${
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
                   index === currentImageIndex ? "opacity-100" : "opacity-0"
                 }`}
               />
@@ -157,7 +157,7 @@ const IntroSection: React.FC = () => {
             {/* Curtain overlay */}
             <div
               ref={curtainRef}
-              className="absolute inset-0 bg-white origin-top"
+              className="absolute inset-0 bg-secondary origin-top"
               style={{ transformOrigin: "top" }}
             />
           </div>
@@ -171,7 +171,7 @@ const IntroSection: React.FC = () => {
             <Typewriter
               text={t("home.title") as string}
               as="h1"
-              className="text-2xl font-medium whitespace-nowrap"
+              className="text-lg font-medium uppercase tracking-wide whitespace-nowrap"
               speed={100}
               delay={200}
             />
@@ -186,7 +186,7 @@ const IntroSection: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent z-10 hidden md:block"></div>
+        <div className="absolute bottom-0 right-0 w-7/12 h-16 bg-gradient-to-t from-secondary to-transparent z-10 hidden md:block"></div>
       </div>
     </div>
   );

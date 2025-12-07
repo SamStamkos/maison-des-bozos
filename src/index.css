@@ -20,6 +20,7 @@
   --font-mono: 'Nocturne Mono', monospace;
   --font-sans: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   --color-primary: #212122;
+  --color-secondary: #bda075;
 
   --ease-out-quad: cubic-bezier(0.5, 1, 0.89, 1)
 }

@@ -87,8 +87,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         en: "",
       },
       "home.musee.title": {
-        fr: "Le musée des Bozos",
-        en: "The Bozo Museum",
+        fr: "Le musée des Bozos de Montréal",
+        en: "The Montreal Bozo Museum",
       },
       "home.musee.button": {
         fr: "Découvrez le musée",
@@ -138,16 +138,16 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
 
       // Footer
       "footer.email": {
-        fr: "direction@maisondesbozo.com",
-        en: "direction@maisondesbozo.com",
+        fr: "info@chezbozo.com",
+        en: "info@chezbozo.com",
       },
       "footer.address": {
-        fr: "1208 Crescent St,\nMontreal, Quebec\nH3G 2A9",
-        en: "1208 Crescent St,\nMontreal, Quebec\nH3G 2A9",
+        fr: "1208 Rue Crescent, \nMontréal, QC \nH3G 2A9",
+        en: "1208 Crescent St,\nMontreal, QC\nH3G 2A9",
       },
       "footer.copyright": {
-        fr: "© 2025 Maison des Bozo.",
-        en: "© 2025 House of Bozo.",
+        fr: "© 2025 Maison des Bozos.",
+        en: "© 2025 House of Bozos.",
       },
       "footer.privacy": {
         fr: "Politique de confidentialité",

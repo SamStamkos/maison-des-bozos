@@ -22,7 +22,7 @@ const Home: React.FC = () => {
   }, [language]);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-secondary">
       <IntroSection />
       <ConcertsSection />
       <MuseumSection />

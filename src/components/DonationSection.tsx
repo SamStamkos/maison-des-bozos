@@ -49,13 +49,13 @@ const DonationSection: React.FC = () => {
         <Typewriter
           text={t("home.donation.title") as string}
           as="h2"
-          className="text-2xl font-medium"
+          className="text-lg font-medium uppercase tracking-wide whitespace-nowrap"
           speed={80}
           delay={200}
           enabled={isInView}
         />
         <p
-          className={`text-sm w-full md:w-2/3 leading-relaxed transition-all duration-1000 ease-out-quad ${
+          className={`text-sm w-full md:w-4/5 leading-relaxed transition-all duration-1000 ease-out-quad ${
             showContent
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
@@ -68,7 +68,7 @@ const DonationSection: React.FC = () => {
         <img
           src="/fondation.jpg"
           alt="Maison des Bozos"
-          className={`w-40 transition-all duration-1000 ease-out-quad ${
+          className={`w-28 transition-all duration-1000 ease-out-quad ${
             showContent
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"

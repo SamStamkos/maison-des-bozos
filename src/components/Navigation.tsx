@@ -5,7 +5,7 @@ const Navigation: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
 
   return (
-    <nav className="border-b border-primary/20 h-14">
+    <nav className="border-b border-primary/20 h-14 bg-white">
       <div className="max-w-screen-2xl px-4 md:px-12 mx-auto">
         <div className="flex justify-between items-center py-4">
           <div className="text-sm tracking-widest text-primary">

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
@@ -22,7 +22,7 @@ function App() {
       {!loadingComplete ? (
         <LoadingScreen onComplete={handleLoadingComplete} />
       ) : (
-        <div className="App">
+        <div className="App bg-secondary">
           <Navigation />
           <Home />
           <Footer />

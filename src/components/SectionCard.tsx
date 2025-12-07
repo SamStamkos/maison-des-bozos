@@ -61,13 +61,13 @@ const SectionCard: React.FC<SectionCardProps> = ({
   // Mobile: full width with padding, Desktop: sticky positioned
   const positionClasses =
     position === "left"
-      ? "mx-4 md:mx-0 md:sticky md:top-8 md:bottom-8 md:left-12 md:w-[400px]"
-      : "mx-4 md:mx-0 md:sticky md:top-8 md:right-12 md:float-right md:w-[400px]";
+      ? "mx-4 md:mx-0 md:sticky md:top-8 md:bottom-8 md:left-12 md:w-[450px]"
+      : "mx-4 md:mx-0 md:sticky md:top-8 md:right-12 md:float-right md:w-[450px]";
 
   return (
     <div
       ref={cardRef}
-      className={`${positionClasses} px-4 md:px-8 py-6 bg-[#bda075] flex flex-col items-start justify-start space-y-2 shadow-xl rounded-xl ${className}`}
+      className={`${positionClasses} px-4 md:px-8 py-6 bg-white flex flex-col items-start justify-start space-y-2 shadow-xl rounded-xl ${className}`}
       style={{
         backgroundImage: `
           repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px),
@@ -78,7 +78,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
       <Typewriter
         text={title}
         as="h2"
-        className="text-lg font-medium"
+        className="text-lg font-medium uppercase tracking-wide whitespace-nowrap"
         speed={100}
         delay={200}
         enabled={isInView}
