@@ -122,7 +122,7 @@ const IntroSection: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowDescriptions(true);
-    }, 2500);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -55,7 +55,7 @@ const DonationSection: React.FC = () => {
           text={t("home.donation.title") as string}
           as="h2"
           className="text-lg font-medium uppercase tracking-wide lg:whitespace-nowrap"
-          speed={80}
+          speed={50}
           delay={200}
           enabled={isInView}
         />
