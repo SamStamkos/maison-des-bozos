@@ -52,7 +52,7 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
     >
       {/* Mobile: stacked layout, Desktop: absolute positioning */}
       <div className={imagePositionClasses}>
-        <div className="relative w-full aspect-[3/4] md:aspect-[5/3] overflow-hidden rounded-xs">
+        <div className="relative w-full aspect-[5/3] overflow-hidden rounded-xs">
           {/* Crossfade images */}
           {images.map((image, index) => (
             <picture

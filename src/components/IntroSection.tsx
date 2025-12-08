@@ -74,35 +74,39 @@ const IntroSection: React.FC = () => {
         });
       }
 
-      // Parallax effect on scroll - text moves down
+      // Parallax effect on scroll - DESKTOP ONLY (no extra animations on mobile for better UX)
       if (introTextRef.current) {
         // Ensure text starts at correct position
         gsap.set(introTextRef.current, { y: 0, opacity: 1 });
 
-        // Text moves down throughout the scroll
-        gsap.to(introTextRef.current, {
-          y: ANIMATION_CONFIG.parallax.textMoveDistance,
-          ease: "none",
-          scrollTrigger: {
-            trigger: introImageRef.current,
-            start: "15% top",
-            end: "bottom top",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
-        });
+        // Apply scroll animations only on desktop (768px+)
+        const mm = gsap.matchMedia();
+        mm.add("(min-width: 768px)", () => {
+          // Text moves down throughout the scroll
+          gsap.to(introTextRef.current, {
+            y: ANIMATION_CONFIG.parallax.textMoveDistance,
+            ease: "none",
+            scrollTrigger: {
+              trigger: introImageRef.current,
+              start: "15% top",
+              end: "bottom top",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
 
-        // Text fades out in the last 80% of the scroll
-        gsap.to(introTextRef.current, {
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: introImageRef.current,
-            start: "top top",
-            end: "70% top",
-            scrub: true,
-            invalidateOnRefresh: true,
-          },
+          // Text fades out in the last 80% of the scroll
+          gsap.to(introTextRef.current, {
+            opacity: 0,
+            ease: "none",
+            scrollTrigger: {
+              trigger: introImageRef.current,
+              start: "top top",
+              end: "70% top",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          });
         });
       }
     });
@@ -137,14 +141,14 @@ const IntroSection: React.FC = () => {
   }, [curtainAnimationComplete]);
 
   return (
-    <section className="max-w-screen-2xl mx-auto" aria-label="Introduction">
-      <div className="relative grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
-        <div className="relative col-span-1 md:col-span-5 order-2 md:order-1 md:px-0">
+    <section className="max-w-screen-2xl px-4 md:px-12 mx-auto" aria-label="Introduction">
+      <div className="relative grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-0 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
+        <div className="relative col-span-1 md:col-span-5 md:px-0">
           <div ref={introImageRef} className="relative w-full h-full">
             {INTRO_IMAGES.map((image, index) => (
               <picture
                 key={index}
-                className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                className={`not-first:absolute md:absolute not-first:inset-0 md:inset-0 flex items-center justify-center transition-opacity duration-1000 ease-in-out ${
                   index === currentImageIndex ? "opacity-100" : "opacity-0"
                 }`}
               >
@@ -154,11 +158,11 @@ const IntroSection: React.FC = () => {
                 />
                 <img
                   src={image}
-                  alt={`Galerie de photos de la Maison des Bozos - Image ${index + 1}: intérieur et ambiance de la salle de spectacle`}
+                  alt={`Galerie de photos de la Maison des Bozos - Image ${index + 1}`}
                   loading={index === 0 ? "eager" : "lazy"}
                   fetchPriority={index === 0 ? "high" : undefined}
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="w-full object-cover rounded-lg overflow-hidden"
                 />
               </picture>
             ))}
@@ -172,7 +176,7 @@ const IntroSection: React.FC = () => {
 
         <div
           ref={introTextRef}
-          className="col-span-1 md:col-span-7 px-0 md:px-24 self-center order-1 md:order-2 mb-12 md:mb-0"
+          className="col-span-1 md:col-span-7 px-0 md:px-12 self-center mb-12 md:mb-0"
         >
           <div className="space-y-4 px-4">
             <Typewriter

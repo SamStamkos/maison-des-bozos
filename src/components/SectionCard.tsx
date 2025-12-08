@@ -99,7 +99,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
         ))}
       </div>
       <div
-        className={`transition-all duration-700 ease-out-quad ${
+        className={`w-full md:w-auto mt-6 transition-all duration-700 ease-out-quad ${
           showDescriptions
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4"
@@ -108,7 +108,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
       >
         <button
           type="button"
-          className="tpos-add-to-cart py-2 px-4 mt-6 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
+          className="tpos-add-to-cart w-full md:w-auto py-2 px-4 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
           data-tpos-group={buttonDataGroup}
         >
           {buttonText}
