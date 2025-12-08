@@ -19,7 +19,7 @@ const ConcertsSection: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % CONCERTS_IMAGES.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, []);

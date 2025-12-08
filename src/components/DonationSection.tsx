@@ -38,7 +38,7 @@ const DonationSection: React.FC = () => {
 
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 800);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, [isInView]);
@@ -64,28 +64,32 @@ const DonationSection: React.FC = () => {
           {t("home.donation.description")}
         </p>
       </div>
-      <div className="mt-12 space-y-4">
-        <img
+      <div className="space-y-4">
+        {/* <img
           src="/fondation.jpg"
           alt="Maison des Bozos"
-          className={`w-28 transition-all duration-1000 ease-out-quad ${
+          className={`w-28 transition-all duration-700 ease-out-quad ${
             showContent
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
           }`}
           style={{ transitionDelay: "300ms" }}
-        />
-        <button
-          type="button"
-          className={`mt-4 py-2 px-4 rounded-xs text-primary border border-primary/70 hover:border-primary transition-all duration-1000 ease-out-quad ${
+        /> */}
+        <div
+          className={`transition-all duration-700 ease-out-quad ${
             showContent
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
           }`}
           style={{ transitionDelay: "600ms" }}
         >
-          {t("home.donation.button")}
-        </button>
+          <button
+            type="button"
+            className="py-2 px-4 mt-6 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
+          >
+            {t("home.donation.button")}
+          </button>
+        </div>
       </div>
     </section>
   );

@@ -53,7 +53,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
 
     const timer = setTimeout(() => {
       setShowDescriptions(true);
-    }, 800);
+    }, 1200);
 
     return () => clearTimeout(timer);
   }, [isInView]);
@@ -87,7 +87,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
         {descriptions.map((description, index) => (
           <p
             key={index}
-            className={`text-sm leading-relaxed transition-all duration-1000 ease-out-quad ${
+            className={`text-sm font-medium leading-relaxed transition-all duration-1000 ease-out-quad ${
               showDescriptions
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
@@ -99,7 +99,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
         ))}
       </div>
       <div
-        className={`transition-all duration-1000 ease-out-quad ${
+        className={`transition-all duration-700 ease-out-quad ${
           showDescriptions
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4"

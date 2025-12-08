@@ -13,6 +13,7 @@ const IntroSection: React.FC = () => {
   const curtainRef = useRef<HTMLDivElement>(null);
   const [showDescriptions, setShowDescriptions] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [curtainAnimationComplete, setCurtainAnimationComplete] = useState(false);
 
   // Dynamically load all images from /public/intro directory
   const galleryImages = [
@@ -42,7 +43,10 @@ const IntroSection: React.FC = () => {
           scaleY: 0,
           duration: 1.5,
           ease: "power2.out",
-          delay: 0.4,
+          onComplete: () => {
+            // Trigger gallery auto-switch after curtain animation completes
+            setCurtainAnimationComplete(true);
+          },
         }
       );
     }
@@ -125,25 +129,24 @@ const IntroSection: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Gallery auto-switch every 4 seconds
+  // Gallery auto-switch every 4 seconds - starts after curtain animation
   useEffect(() => {
+    if (!curtainAnimationComplete) return;
+
     const interval = setInterval(() => {
       setCurrentImageIndex(
         (prevIndex) => (prevIndex + 1) % galleryImages.length
       );
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
-  }, [galleryImages.length]);
+  }, [curtainAnimationComplete, galleryImages.length]);
 
   return (
     <div className="max-w-screen-2xl mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-12 min-h-[calc(100vh-3.5rem)] mt-8 md:mt-0">
         <div className="relative col-span-1 md:col-span-5 order-2 md:order-1 md:px-0">
-          <div
-            ref={introImageRef}
-            className="relative w-full h-full"
-          >
+          <div ref={introImageRef} className="relative w-full h-full">
             {galleryImages.map((image, index) => (
               <img
                 key={index}
@@ -165,7 +168,7 @@ const IntroSection: React.FC = () => {
 
         <div
           ref={introTextRef}
-          className="col-span-1 md:col-span-7 px-0 md:px-12 self-center order-1 md:order-2 mb-12 md:mb-0"
+          className="col-span-1 md:col-span-7 px-0 md:px-24 self-center order-1 md:order-2 mb-12 md:mb-0"
         >
           <div className="space-y-4 px-4">
             <Typewriter
@@ -176,7 +179,7 @@ const IntroSection: React.FC = () => {
               delay={200}
             />
             <p
-              className={`text-sm leading-relaxed md:text-justify transition-all duration-1000 ease-out-quad ${
+              className={`text-sm font-medium leading-relaxed md:text-justify transition-all duration-1500 ease-out-quad ${
                 showDescriptions
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"

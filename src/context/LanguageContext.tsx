@@ -57,17 +57,17 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       "home.description1": {
         fr: (
           <>
-            Bienvenue… <span className="italic font-medium">Chez Bozo</span>! Au cœur du centre-ville de Montréal, à même le
+            Bienvenue… <span className="italic font-semibold">Chez Bozo</span>! Au cœur du centre-ville de Montréal, à même le
             lieu historique de la toute première boîte à chansons d’Amérique,
             vient de naître et renaître{" "}
-            <span className="italic font-medium">Chez Bozo</span>. Cet endroit
+            <span className="italic font-semibold">Chez Bozo</span>. Cet endroit
             unique possède plusieurs dimensions: une salle intime où vos
             artistes favoris offrent des spectacles acoustiques; un mini-musée
             abritant de précieux artéfacts culturels dont la fameuse murale des
             empreintes, ainsi que le café-bar{" "}
-            <span className="italic font-medium">Le Lutèce</span>, qui vous
+            <span className="italic font-semibold">Le Lutèce</span>, qui vous
             accueillera chaleureusement du matin au soir. Sans contredit,{" "}
-            <span className="italic font-medium">Chez Bozo</span> devient la
+            <span className="italic font-semibold">Chez Bozo</span> devient la
             nouvelle destination urbaine pour les vrais amateurs de culture.
           </>
         ),

@@ -18,7 +18,7 @@ const MuseumSection: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % MUSEUM_IMAGES.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(intervalId);
   }, []);
