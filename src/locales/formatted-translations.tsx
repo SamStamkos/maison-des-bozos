@@ -26,7 +26,22 @@ export const formattedTranslations: Record<
         nouvelle destination urbaine pour les vrais amateurs de culture.
       </>
     ),
-    en: "In the heart of downtown Montreal, the House of Bozo will soon be born and reborn in the historic location of the very first song house in America. This project promises to revolutionize the cultural scene by offering a place where the unexpected becomes the norm. Conceived as a multi-dimensional space — acoustic concert hall, mini-museum full of rare pieces, café-bar in the heart of a florist and modular event space — the House of Bozo invites exploration of new artistic horizons.",
+    en: (
+      <>
+        Welcome… to <span className="italic font-semibold">Chez Bozo</span>! In
+        the heart of downtown Montreal, in the historic location of the very
+        first song house in America,{" "}
+        <span className="italic font-semibold">Chez Bozo</span> has just been
+        born and reborn. This unique venue has several dimensions: an intimate
+        room where your favorite artists perform acoustic shows; a mini-museum
+        housing precious cultural artifacts including the famous handprint
+        mural, as well as the{" "}
+        <span className="italic font-semibold">Le Lutèce</span> café-bar, which
+        will warmly welcome you from morning to night. Without a doubt,{" "}
+        <span className="italic font-semibold">Chez Bozo</span> is becoming the
+        new urban destination for true culture lovers.
+      </>
+    ),
   },
   "home.musee.description": {
     fr: (
@@ -45,6 +60,20 @@ export const formattedTranslations: Record<
         fortes garanties!
       </>
     ),
-    en: "Dive into the history of America's first song house. A living museum celebrating Quebec's musical heritage.",
+    en: (
+      <>
+        Dive into the history of America's first song house. A fascinating
+        mini-museum that reveals for the first time since 1959, the famous mural
+        where nearly one hundred personalities of the era, including{" "}
+        <span className="font-bold">Claude Léveillée</span>,{" "}
+        <span className="font-bold">Jean-Pierre Ferland</span>,{" "}
+        <span className="font-bold">Clémence Desrochers</span>,{" "}
+        <span className="font-bold">Raymond Lévesque</span>,{" "}
+        <span className="font-bold">Félix Leclerc</span>,{" "}
+        <span className="font-bold">Alys Robi</span>, not to mention the
+        world-famous <span className="font-bold">Édith Piaf</span>, left their
+        handprint and signature. A must-see, strong emotions guaranteed!
+      </>
+    ),
   },
 };
