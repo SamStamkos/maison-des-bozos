@@ -50,16 +50,22 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
 
         {/* Loading Image */}
         <div className="absolute inset-0">
-          <img
-            src="/maison-des-bozos-landing.jpg"
-            alt="Entrée de la Maison des Bozos - Salle de spectacle historique sur la rue Crescent à Montréal"
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            className={`w-full h-full object-cover object-top scale-110 transition-transform duration-5000 ease-linear ${
-              animScale ? "scale-110" : "scale-120"
-            }`}
-          />
+          <picture>
+            <source
+              srcSet="/maison-des-bozos-landing.webp"
+              type="image/webp"
+            />
+            <img
+              src="/maison-des-bozos-landing.jpg"
+              alt="Entrée de la Maison des Bozos - Salle de spectacle historique sur la rue Crescent à Montréal"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              className={`w-full h-full object-cover object-top scale-110 transition-transform duration-5000 ease-linear ${
+                animScale ? "scale-110" : "scale-120"
+              }`}
+            />
+          </picture>
         </div>
 
         <div className="absolute inset-0 bg-black opacity-20 z-10"></div>

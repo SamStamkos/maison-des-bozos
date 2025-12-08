@@ -9,14 +9,14 @@ const Navigation: React.FC = () => {
     // Trigger animation on mount
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 200);
+    }, 400);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <nav
-      className={`border-b border-primary/20 h-14 bg-white transition-transform duration-1000 ease-out ${
+      className={`relative z-50 border-b border-primary/20 h-14 bg-white transition-transform duration-1000 ease-in-out ${
         isLoaded ? "translate-y-0" : "-translate-y-full"
       }`}
     >

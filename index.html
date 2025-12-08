@@ -17,21 +17,43 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <!-- manifest.json loaded async via JavaScript in App.tsx for better performance -->
 
     <!-- Apple Mobile Web App -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Maison des Bozos" />
 
-    <!-- Fonts -->
+    <!-- Preload LCP Image (Largest Contentful Paint) -->
+    <link rel="preload" as="image" href="/intro/intro-1.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/intro/intro-1.jpg" type="image/jpeg" fetchpriority="high" />
+
+    <!-- Fonts - Optimized for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Preload critical font weights only -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://lepointdevente.com/plugins/embed.js"></script>
+    <!-- Defer non-critical third-party script -->
+    <script src="https://lepointdevente.com/plugins/embed.js" defer></script>
   </body>
 </html>

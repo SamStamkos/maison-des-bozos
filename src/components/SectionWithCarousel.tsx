@@ -55,16 +55,24 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
         <div className="relative w-full aspect-[3/4] md:aspect-[5/3] overflow-hidden rounded-xs">
           {/* Crossfade images */}
           {images.map((image, index) => (
-            <img
+            <picture
               key={image}
-              src={image}
-              alt={`${altTextPrefix} à la Maison des Bozos - Photo ${index + 1} sur ${images.length}`}
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding="async"
-              className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-${ANIMATION_CONFIG.carousel.imageFadeDuration} ${
+              className={`absolute inset-0 w-full h-full transition-opacity duration-${ANIMATION_CONFIG.carousel.imageFadeDuration} ${
                 index === currentImageIndex ? "opacity-100" : "opacity-0"
               }`}
-            />
+            >
+              <source
+                srcSet={image.replace(/\.(jpg|jpeg)$/i, ".webp")}
+                type="image/webp"
+              />
+              <img
+                src={image}
+                alt={`${altTextPrefix} à la Maison des Bozos - Photo ${index + 1} sur ${images.length}`}
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-contain"
+              />
+            </picture>
           ))}
         </div>
       </div>

@@ -27,8 +27,8 @@ export const ANIMATION_CONFIG: AnimationConfig = {
     staggerDelay: 300,
   },
   curtain: {
-    duration: 1.5,
-    ease: "power3.inOut", // More dramatic easing
+    duration: 2,
+    ease: "power2.inOut",
   },
   parallax: {
     imageMoveDistance: -200,

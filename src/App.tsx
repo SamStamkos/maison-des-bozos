@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LanguageProvider } from "./context/LanguageContext";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
@@ -12,6 +12,14 @@ function App() {
     // Check if user has already seen the loading screen this session
     return sessionStorage.getItem("hasSeenLoading") === "true";
   });
+
+  // Load manifest.json asynchronously after page load for better performance
+  useEffect(() => {
+    const manifestLink = document.createElement("link");
+    manifestLink.rel = "manifest";
+    manifestLink.href = "/manifest.json";
+    document.head.appendChild(manifestLink);
+  }, []);
 
   const handleLoadingComplete = () => {
     // Mark that user has seen the loading screen
