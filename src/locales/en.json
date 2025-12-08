@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "title": "House of Bozos"
+  },
+  "home": {
+    "title": "Welcome to Bozo",
+    "description1": "In the heart of downtown Montreal, the House of Bozo will soon be born and reborn in the historic location of the very first song house in America. This project promises to revolutionize the cultural scene by offering a place where the unexpected becomes the norm. Conceived as a multi-dimensional space — acoustic concert hall, mini-museum full of rare pieces, café-bar in the heart of a florist and modular event space — the House of Bozo invites exploration of new artistic horizons.",
+    "reserve": "Book your visit",
+    "concerts": {
+      "title": "Concerts at Bozo",
+      "description": "",
+      "button": "Book your tickets"
+    },
+    "musee": {
+      "title": "The Montreal Bozo Museum",
+      "description": "Dive into the history of America's first song house. A living museum celebrating Quebec's musical heritage.",
+      "button": "Discover the Museum"
+    },
+    "donation": {
+      "title": "Make a donation for the protection of Quebec musical heritage",
+      "description": "In the heart of downtown Montreal, the House of Bozo will soon be born and reborn in the historic location of the very first song house in America. This project promises to revolutionize the cultural scene by offering a place where the unexpected becomes the norm.",
+      "button": "Make a donation"
+    }
+  },
+  "page": {
+    "concerts": {
+      "description": "Discover our upcoming concerts and buy your tickets online",
+      "viewTickets": "Book now"
+    }
+  },
+  "footer": {
+    "email": "info@chezbozo.com",
+    "address": "1208 Crescent St,\nMontreal, QC\nH3G 2A9",
+    "copyright": "© 2025 House of Bozos.",
+    "privacy": "Privacy Policy"
+  }
+}

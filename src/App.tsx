@@ -4,6 +4,8 @@ import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
+import SEO from "./components/SEO";
+import StructuredData from "./components/StructuredData";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(() => {
@@ -19,6 +21,8 @@ function App() {
 
   return (
     <LanguageProvider>
+      <SEO />
+      <StructuredData />
       {!loadingComplete ? (
         <LoadingScreen onComplete={handleLoadingComplete} />
       ) : (

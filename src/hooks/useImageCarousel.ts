@@ -30,26 +30,33 @@ export const useImageCarousel = ({
     if (!isActive) return;
 
     const timer = setInterval(() => {
-      setPrevIndex(currentIndex);
-      setCurrentIndex((prev) => (prev + 1) % images.length);
+      setCurrentIndex((prev) => {
+        setPrevIndex(prev); // Use previous value from setState callback
+        return (prev + 1) % images.length;
+      });
     }, interval);
 
     return () => clearInterval(timer);
-  }, [isActive, images.length, currentIndex, interval]);
+  }, [isActive, images.length, interval]);
 
   // Corner-to-corner diagonal reveal animation
   useEffect(() => {
     if (!newImageRef.current || currentIndex === prevIndex) return;
 
-    gsap.fromTo(
+    const tween = gsap.fromTo(
       newImageRef.current,
       { clipPath: "polygon(0 0, 0 0, 0 0, 0 0)" },
       {
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         duration: animationDuration,
-        ease: "power2.out",
+        ease: "power3.inOut", // More dramatic reveal
       }
     );
+
+    // Clean up the tween on unmount or when dependencies change
+    return () => {
+      tween.kill();
+    };
   }, [currentIndex, prevIndex, animationDuration]);
 
   const setIsActiveCallback = useCallback((active: boolean) => {

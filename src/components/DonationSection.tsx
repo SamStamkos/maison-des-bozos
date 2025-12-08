@@ -44,7 +44,12 @@ const DonationSection: React.FC = () => {
   }, [isInView]);
 
   return (
-    <section ref={sectionRef} className="relative mt-20 mx-4 md:mx-12">
+    <section
+      id="donation"
+      ref={sectionRef}
+      className="relative mt-20 mx-4 md:mx-12"
+      aria-labelledby="donation-title"
+    >
       <div className="w-full flex flex-col items-start gap-4">
         <Typewriter
           text={t("home.donation.title") as string}
@@ -64,32 +69,26 @@ const DonationSection: React.FC = () => {
           {t("home.donation.description")}
         </p>
       </div>
-      <div className="space-y-4">
-        {/* <img
-          src="/fondation.jpg"
-          alt="Maison des Bozos"
-          className={`w-28 transition-all duration-700 ease-out-quad ${
-            showContent
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-4"
-          }`}
-          style={{ transitionDelay: "300ms" }}
-        /> */}
-        <div
-          className={`transition-all duration-700 ease-out-quad ${
-            showContent
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-4"
-          }`}
-          style={{ transitionDelay: "600ms" }}
+      <div
+        className={`flex items-center space-x-8 transition-all duration-700 ease-out-quad ${
+          showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        }`}
+        style={{ transitionDelay: "300ms" }}
+      >
+        <button
+          type="button"
+          className="py-2 px-4 mt-6 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-[#228ed6] hover:text-white hover:border-[#228ed6] transition-colors duration-200"
         >
-          <button
-            type="button"
-            className="py-2 px-4 mt-6 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
-          >
-            {t("home.donation.button")}
-          </button>
-        </div>
+          {t("home.donation.button")}
+        </button>
+
+        <img
+          src="/fondation.png"
+          alt="Maison des Bozos"
+          loading="lazy"
+          decoding="async"
+          className="w-28"
+        />
       </div>
     </section>
   );

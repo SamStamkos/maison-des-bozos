@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Main page - French -->
+  <url>
+    <loc>https://chezbozo.com/</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://chezbozo.com/?lang=en"/>
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://chezbozo.com/?lang=fr"/>
+  </url>
+
+  <!-- Concerts section -->
+  <url>
+    <loc>https://chezbozo.com/#concerts</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Museum section -->
+  <url>
+    <loc>https://chezbozo.com/#musee</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Donation section -->
+  <url>
+    <loc>https://chezbozo.com/#donation</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

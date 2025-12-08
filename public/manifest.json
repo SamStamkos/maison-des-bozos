@@ -1,0 +1,55 @@
+{
+  "name": "Maison des Bozos",
+  "short_name": "Chez Bozo",
+  "description": "Salle de spectacle, mini-musée et café-bar au cœur de Montréal. Première boîte à chansons d'Amérique depuis 1959.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#212122",
+  "theme_color": "#bda075",
+  "orientation": "portrait-primary",
+  "lang": "fr-CA",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["entertainment", "music", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/maison-des-bozos-landing.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg"
+    }
+  ]
+}

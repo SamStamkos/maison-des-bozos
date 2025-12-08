@@ -21,15 +21,27 @@ const Footer: React.FC = () => {
               href="https://www.instagram.com/maisondesbozos/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Suivez-nous sur Instagram"
             >
-              <img src="/instagram-logo.svg" alt="Instagram" />
+              <img
+                src="/instagram-logo.svg"
+                alt="Logo Instagram - Page de la Maison des Bozos"
+                width="24"
+                height="24"
+              />
             </a>
             <a
               href="https://www.facebook.com/maisondesbozos/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Suivez-nous sur Facebook"
             >
-              <img src="/facebook-logo.svg" alt="Facebook" />
+              <img
+                src="/facebook-logo.svg"
+                alt="Logo Facebook - Page de la Maison des Bozos"
+                width="24"
+                height="24"
+              />
             </a>
           </div>
         </div>

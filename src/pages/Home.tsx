@@ -10,24 +10,36 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     // Update the script language parameter when language changes
-    const script = document.querySelector(
+    const existingScript = document.querySelector(
       'script[src*="lepointdevente.com/plugins/embed.js"]'
     );
-    if (script) {
-      script.remove();
-      const newScript = document.createElement("script");
-      newScript.src = `https://lepointdevente.com/plugins/embed.js?lang=${language}`;
-      document.body.appendChild(newScript);
+
+    if (existingScript) {
+      existingScript.remove();
     }
+
+    const newScript = document.createElement("script");
+    newScript.src = `https://lepointdevente.com/plugins/embed.js?lang=${language}`;
+    document.body.appendChild(newScript);
+
+    // Cleanup on unmount or language change
+    return () => {
+      const scriptToRemove = document.querySelector(
+        `script[src*="lepointdevente.com/plugins/embed.js?lang=${language}"]`
+      );
+      if (scriptToRemove) {
+        scriptToRemove.remove();
+      }
+    };
   }, [language]);
 
   return (
-    <div className="min-h-screen bg-secondary">
+    <main className="min-h-screen bg-secondary">
       <IntroSection />
       <ConcertsSection />
       <MuseumSection />
       <DonationSection />
-    </div>
+    </main>
   );
 };
 

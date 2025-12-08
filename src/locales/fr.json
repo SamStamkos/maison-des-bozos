@@ -1,0 +1,37 @@
+{
+  "nav": {
+    "title": "Maison des Bozos"
+  },
+  "home": {
+    "title": "Bienvenue chez Bozo",
+    "description1": "Bienvenue… Chez Bozo! Au cœur du centre-ville de Montréal, à même le lieu historique de la toute première boîte à chansons d'Amérique, vient de naître et renaître Chez Bozo. Cet endroit unique possède plusieurs dimensions: une salle intime où vos artistes favoris offrent des spectacles acoustiques; un mini-musée abritant de précieux artéfacts culturels dont la fameuse murale des empreintes, ainsi que le café-bar Le Lutèce, qui vous accueillera chaleureusement du matin au soir. Sans contredit, Chez Bozo devient la nouvelle destination urbaine pour les vrais amateurs de culture.",
+    "reserve": "Réserver votre visite",
+    "concerts": {
+      "title": "Concerts Chez Bozo",
+      "description": "Découvrez nos concerts intimes et acoustiques dans un lieu mythique chargé d'histoire. Vivez une expérience musicale unique au cœur du centre-ville de Montréal! Consultez notre calendrier et…",
+      "button": "Réservez vos billets"
+    },
+    "musee": {
+      "title": "Le musée des Bozos de Montréal",
+      "description": "Plongez dans l'histoire de la première boîte à chanson d'Amérique. Un mini-musée fascinant qui révèle pour la première fois depuis 1959, la fameuse murale où près de cent personnalités de l'époque, dont Claude Léveillée, Jean-Pierre Ferland, Clémence Desrochers, Raymond Lévesque, Félix Leclerc, Alys Robi, sans oublier la célébrissime Édith Piaf, ont laissé l'empreinte de leur main et leur signature. À voir absolument, émotions fortes garanties!",
+      "button": "Découvrez le musée"
+    },
+    "donation": {
+      "title": "Je fais un don pour la protection du patrimoine musical Québécois",
+      "description": "HARFANG est un organisme à but non lucratif ayant pour mission la protection du patrimoine musical québécois. En effet, la transition numérique a crée un déséquilibre préoccupant dans l'accès à notre patrimoine musical, qui sombre lentement mais sûrement dans le silence. Des milliers d'enregistrements n'ont jamais été numérisés et restent innaccessibles sur les plates-formes modernes. Nous disposons d'une fenêtre critique de seulement quelques années avant que de nombreux enregistrements historiques ne deviennent irrécupérables. SVP, aidez-nous à protéger notre patrimoine musical!",
+      "button": "Je fais un don"
+    }
+  },
+  "page": {
+    "concerts": {
+      "description": "Découvrez nos prochains concerts et achetez vos billets en ligne",
+      "viewTickets": "Réserver dès maintenant"
+    }
+  },
+  "footer": {
+    "email": "info@chezbozo.com",
+    "address": "1208 Rue Crescent, \nMontréal, QC \nH3G 2A9",
+    "copyright": "© 2025 Maison des Bozos.",
+    "privacy": "Politique de confidentialité"
+  }
+}

@@ -58,3 +58,22 @@ code {
 img {
   user-select: none;
 }
+
+/* GPU Acceleration for animated elements */
+.intro-image,
+.carousel-image,
+.parallax-element {
+  will-change: transform, opacity;
+}
+
+/* Remove will-change after animations complete to free GPU memory */
+.animation-complete {
+  will-change: auto;
+}
+
+/* Optimize transforms for better performance */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}

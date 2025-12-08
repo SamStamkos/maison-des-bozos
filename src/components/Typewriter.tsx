@@ -73,44 +73,24 @@ const Typewriter: React.FC<TypewriterProps> = ({
     setHalfwayTriggered(false);
   }, [text]);
 
-  // Render all characters, but only animate those that have been "typed"
-  const renderText = () => {
-    return text.split("").map((char, index) => {
-      const isTyped = index < displayedText.length;
-
-      return (
-        <span
-          key={index}
-          style={{
-            display: "inline-block",
-            opacity: isTyped ? 0 : 0,
-            animation: isTyped ? `fadeIn ${fadeInDuration}ms cubic-bezier(.4,0,.2,1) forwards` : "none",
-            visibility: isTyped ? "visible" : "hidden",
-          }}
-        >
-          {char === " " ? "\u00A0" : char}
-        </span>
-      );
-    });
-  };
-
   return (
-    <>
-      <style>
-        {`
-          @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
-          }
-        `}
-      </style>
-      <Component className={className}>{renderText()}</Component>
-    </>
+    <Component
+      className={className}
+      style={{
+        opacity: displayedText.length > 0 ? 1 : 0,
+        transition: `opacity ${fadeInDuration}ms cubic-bezier(.4,0,.2,1)`,
+      }}
+    >
+      {displayedText || "\u00A0"}
+    </Component>
   );
 };
 
-export default Typewriter;
+export default React.memo(Typewriter, (prevProps, nextProps) => {
+  return (
+    prevProps.text === nextProps.text &&
+    prevProps.enabled === nextProps.enabled &&
+    prevProps.speed === nextProps.speed &&
+    prevProps.delay === nextProps.delay
+  );
+});
