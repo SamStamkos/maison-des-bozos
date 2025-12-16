@@ -12,7 +12,7 @@ export const formattedTranslations: Record<
   "home.description1": {
     fr: (
       <>
-        Bienvenue… <span className="italic font-semibold">Chez Bozo</span>! Au
+        Bienvenue… <span className="italic font-semibold">Chez&nbsp;Bozo</span>! Au
         cœur du centre-ville de Montréal, à même le lieu historique de la toute
         première boîte à chansons d'Amérique, vient de naître et renaître{" "}
         <span className="italic font-semibold">Chez Bozo</span>. Cet endroit
@@ -20,25 +20,25 @@ export const formattedTranslations: Record<
         favoris offrent des spectacles acoustiques, un mini-musée abritant de
         précieux artéfacts culturels dont la fameuse murale des empreintes,
         ainsi que le café-bar{" "}
-        <span className="italic font-semibold">Le Lutèce</span>, qui vous
+        <span className="italic font-semibold">Le&nbsp;Lutèce</span>, qui vous
         accueillera chaleureusement du matin au soir. Sans contredit,{" "}
-        <span className="italic font-semibold">Chez Bozo</span> devient la
+        <span className="italic font-semibold">Chez&nbsp;Bozo</span> devient la
         nouvelle destination urbaine pour les vrais amateurs de culture.
       </>
     ),
     en: (
       <>
-        Welcome… to <span className="italic font-semibold">Chez Bozo</span>! In
+        Welcome… to <span className="italic font-semibold">Chez&nbsp;Bozo</span>! In
         the heart of downtown Montreal, within the walls of the very first
         singer-songwriter venue in America,{" "}
-        <span className="italic font-semibold">Chez Bozo</span> has just been
+        <span className="italic font-semibold">Chez&nbsp;Bozo</span> has just been
         born - and reborn. This unique place has several dimensions: an intimate
         room where your favorite artists perform acoustic shows, a mini-museum
         housing precious cultural artifacts including the famous handprint
         mural, as well as the café-bar{" "}
-        <span className="italic font-semibold">Le Lutèce</span>, which will
+        <span className="italic font-semibold">Le&nbsp;Lutèce</span>, which will
         warmly welcome you from morning to night. Without a doubt,{" "}
-        <span className="italic font-semibold">Chez Bozo</span> is becoming the
+        <span className="italic font-semibold">Chez&nbsp;Bozo</span> is becoming the
         new urban destination for true culture lovers.
       </>
     ),
