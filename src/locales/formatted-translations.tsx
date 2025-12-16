@@ -76,4 +76,31 @@ export const formattedTranslations: Record<
       </>
     ),
   },
+  "home.donation.description": {
+    fr: (
+      <>
+        <span className="font-bold">HARFANG</span> est un organisme à but non
+        lucratif ayant pour mission la protection du patrimoine musical
+        québécois. En effet, la transition numérique a créé un déséquilibre
+        préoccupant dans l'accès à notre patrimoine musical, qui sombre lentement
+        mais sûrement dans le silence. Des milliers d'enregistrements n'ont
+        jamais été numérisés et restent inaccessibles sur les plates-formes
+        modernes. Nous disposons d'une fenêtre critique de seulement quelques
+        années avant que de nombreux enregistrements historiques ne deviennent
+        irrécupérables. SVP, aidez-nous à protéger notre patrimoine musical!
+      </>
+    ),
+    en: (
+      <>
+        <span className="font-bold">HARFANG</span> is a non-profit organization
+        with the mission of protecting Quebec's musical heritage. Indeed, the
+        digital transition has created a worrying imbalance in access to our
+        musical heritage, which is slowly but surely fading into silence.
+        Thousands of recordings have never been digitized and remain inaccessible
+        on modern platforms. We have a critical window of only a few years before
+        many historical recordings become unrecoverable. Please help us protect
+        our musical heritage!
+      </>
+    ),
+  },
 };

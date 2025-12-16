@@ -47,7 +47,7 @@ const DonationSection: React.FC = () => {
     <section
       id="donation"
       ref={sectionRef}
-      className="relative mt-20 mx-4 md:mx-12"
+      className="max-w-screen-2xl px-0 md:px-12 mx-auto relative mt-20"
       aria-labelledby="donation-title"
     >
       <div className="w-full flex flex-col items-start gap-4">
