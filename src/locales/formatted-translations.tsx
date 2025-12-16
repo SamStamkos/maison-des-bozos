@@ -17,7 +17,7 @@ export const formattedTranslations: Record<
         première boîte à chansons d'Amérique, vient de naître et renaître{" "}
         <span className="italic font-semibold">Chez Bozo</span>. Cet endroit
         unique possède plusieurs dimensions: une salle intime où vos artistes
-        favoris offrent des spectacles acoustiques; un mini-musée abritant de
+        favoris offrent des spectacles acoustiques, un mini-musée abritant de
         précieux artéfacts culturels dont la fameuse murale des empreintes,
         ainsi que le café-bar{" "}
         <span className="italic font-semibold">Le Lutèce</span>, qui vous
@@ -29,15 +29,15 @@ export const formattedTranslations: Record<
     en: (
       <>
         Welcome… to <span className="italic font-semibold">Chez Bozo</span>! In
-        the heart of downtown Montreal, in the historic location of the very
-        first song house in America,{" "}
+        the heart of downtown Montreal, within the walls of the very first
+        singer-songwriter venue in America,{" "}
         <span className="italic font-semibold">Chez Bozo</span> has just been
-        born and reborn. This unique venue has several dimensions: an intimate
-        room where your favorite artists perform acoustic shows; a mini-museum
+        born - and reborn. This unique place has several dimensions: an intimate
+        room where your favorite artists perform acoustic shows, a mini-museum
         housing precious cultural artifacts including the famous handprint
-        mural, as well as the{" "}
-        <span className="italic font-semibold">Le Lutèce</span> café-bar, which
-        will warmly welcome you from morning to night. Without a doubt,{" "}
+        mural, as well as the café-bar{" "}
+        <span className="italic font-semibold">Le Lutèce</span>, which will
+        warmly welcome you from morning to night. Without a doubt,{" "}
         <span className="italic font-semibold">Chez Bozo</span> is becoming the
         new urban destination for true culture lovers.
       </>
@@ -62,10 +62,10 @@ export const formattedTranslations: Record<
     ),
     en: (
       <>
-        Dive into the history of America's first song house. A fascinating
-        mini-museum that reveals for the first time since 1959, the famous mural
-        where nearly one hundred personalities of the era, including{" "}
-        <span className="font-bold">Claude Léveillée</span>,{" "}
+        Dive into the history of America's first singer-songwriter venue. A
+        fascinating mini-museum that reveals for the first time since 1959, the
+        famous mural where nearly one hundred personalities of the era,
+        including <span className="font-bold">Claude Léveillée</span>,{" "}
         <span className="font-bold">Jean-Pierre Ferland</span>,{" "}
         <span className="font-bold">Clémence Desrochers</span>,{" "}
         <span className="font-bold">Raymond Lévesque</span>,{" "}

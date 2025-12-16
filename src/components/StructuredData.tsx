@@ -1,4 +1,4 @@
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 import { SITE_INFO, BUSINESS_INFO } from "../constants/seo";
 
 /**

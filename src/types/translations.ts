@@ -22,6 +22,24 @@ type TranslationKeys =
   | "footer.email"
   | "footer.address"
   | "footer.copyright"
-  | "footer.privacy";
+  | "footer.privacy"
+  | "privacy.title"
+  | "privacy.lastUpdated"
+  | "privacy.intro.title"
+  | "privacy.intro.text"
+  | "privacy.collection.title"
+  | "privacy.collection.text"
+  | "privacy.analytics.title"
+  | "privacy.analytics.text"
+  | "privacy.analytics.item1"
+  | "privacy.analytics.item2"
+  | "privacy.analytics.item3"
+  | "privacy.analytics.item4"
+  | "privacy.thirdParty.title"
+  | "privacy.thirdParty.text"
+  | "privacy.rights.title"
+  | "privacy.rights.text"
+  | "privacy.contact.title"
+  | "privacy.contact.text";
 
 export default TranslationKeys;

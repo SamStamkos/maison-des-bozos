@@ -1,19 +1,17 @@
 {
   "nav": {
-    "title": "House of Bozos"
+    "title": "Maison des Bozos"
   },
   "home": {
-    "title": "Welcome to Bozo",
-    "description1": "Welcome… to Chez Bozo! In the heart of downtown Montreal, in the historic location of the very first song house in America, Chez Bozo has just been born and reborn. This unique venue has several dimensions: an intimate room where your favorite artists perform acoustic shows; a mini-museum housing precious cultural artifacts including the famous handprint mural, as well as the Le Lutèce café-bar, which will warmly welcome you from morning to night. Without a doubt, Chez Bozo is becoming the new urban destination for true culture lovers.",
+    "title": "Welcome to Chez Bozo",
     "reserve": "Book your visit",
     "concerts": {
-      "title": "Concerts at Bozo",
+      "title": "Chez Bozo Concerts",
       "description": "Discover our intimate acoustic concerts in a legendary venue steeped in history. Experience a unique musical experience in the heart of downtown Montreal! Check our calendar and…",
       "button": "Book your tickets"
     },
     "musee": {
-      "title": "The Montreal Bozo Museum",
-      "description": "Dive into the history of America's first song house. A fascinating mini-museum that reveals for the first time since 1959, the famous mural where nearly one hundred personalities of the era, including Claude Léveillée, Jean-Pierre Ferland, Clémence Desrochers, Raymond Lévesque, Félix Leclerc, Alys Robi, not to mention the world-famous Édith Piaf, left their handprint and signature. A must-see, strong emotions guaranteed!",
+      "title": "The Montreal Museum of Bozos",
       "button": "Discover the Museum"
     },
     "donation": {
@@ -33,5 +31,37 @@
     "address": "1208 Crescent St,\nMontreal, QC\nH3G 2A9",
     "copyright": "© 2025 House of Bozos.",
     "privacy": "Privacy Policy"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "intro": {
+      "title": "Introduction",
+      "text": "Maison des Bozos (\"we\", \"our\") is committed to protecting your privacy. This policy explains how we handle information when you visit our website chezbozo.com."
+    },
+    "collection": {
+      "title": "Personal Data Collection",
+      "text": "We do not collect any personally identifiable information when you browse our site. We do not use cookies to track your behavior or create user profiles."
+    },
+    "analytics": {
+      "title": "Website Analytics",
+      "text": "We use Fathom Analytics, a privacy-respecting analytics service. Fathom is designed to be GDPR and Quebec Law 25 compliant without requiring consent. Here's what Fathom does NOT do:",
+      "item1": "No cookies used",
+      "item2": "No IP addresses stored",
+      "item3": "No cross-site tracking",
+      "item4": "No personal data collected"
+    },
+    "thirdParty": {
+      "title": "Third-Party Services",
+      "text": "Our site may contain links to third-party services (ticketing, social media). These services have their own privacy policies and we encourage you to review them."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "text": "Under Quebec's Law 25, you have the right to access, rectify, and delete your personal data. Since we do not collect personal data, these rights do not apply to our site."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "text": "If you have any questions about this privacy policy, you can reach us at:"
+    }
   }
 }

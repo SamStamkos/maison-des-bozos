@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 import Typewriter from "./Typewriter";
 
 const DonationSection: React.FC = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 import IntroSection from "../components/IntroSection";
 import ConcertsSection from "../components/ConcertsSection";
 import MuseumSection from "../components/MuseumSection";

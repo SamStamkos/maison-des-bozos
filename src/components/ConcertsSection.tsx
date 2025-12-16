@@ -1,5 +1,5 @@
 import React from "react";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 import { CONCERTS_IMAGES } from "../constants/images";
 import SectionWithCarousel from "./SectionWithCarousel";
 

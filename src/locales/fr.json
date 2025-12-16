@@ -4,7 +4,6 @@
   },
   "home": {
     "title": "Bienvenue chez Bozo",
-    "description1": "Bienvenue… Chez Bozo! Au cœur du centre-ville de Montréal, à même le lieu historique de la toute première boîte à chansons d'Amérique, vient de naître et renaître Chez Bozo. Cet endroit unique possède plusieurs dimensions: une salle intime où vos artistes favoris offrent des spectacles acoustiques; un mini-musée abritant de précieux artéfacts culturels dont la fameuse murale des empreintes, ainsi que le café-bar Le Lutèce, qui vous accueillera chaleureusement du matin au soir. Sans contredit, Chez Bozo devient la nouvelle destination urbaine pour les vrais amateurs de culture.",
     "reserve": "Réserver votre visite",
     "concerts": {
       "title": "Concerts Chez Bozo",
@@ -13,7 +12,6 @@
     },
     "musee": {
       "title": "Le musée des Bozos de Montréal",
-      "description": "Plongez dans l'histoire de la première boîte à chanson d'Amérique. Un mini-musée fascinant qui révèle pour la première fois depuis 1959, la fameuse murale où près de cent personnalités de l'époque, dont Claude Léveillée, Jean-Pierre Ferland, Clémence Desrochers, Raymond Lévesque, Félix Leclerc, Alys Robi, sans oublier la célébrissime Édith Piaf, ont laissé l'empreinte de leur main et leur signature. À voir absolument, émotions fortes garanties!",
       "button": "Découvrez le musée"
     },
     "donation": {
@@ -33,5 +31,37 @@
     "address": "1208 Rue Crescent, \nMontréal, QC \nH3G 2A9",
     "copyright": "© 2025 Maison des Bozos.",
     "privacy": "Politique de confidentialité"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour",
+    "intro": {
+      "title": "Introduction",
+      "text": "La Maison des Bozos (« nous », « notre ») s'engage à protéger votre vie privée. Cette politique explique comment nous traitons les informations lorsque vous visitez notre site web chezbozo.com."
+    },
+    "collection": {
+      "title": "Collecte de données personnelles",
+      "text": "Nous ne collectons aucune donnée personnelle identifiable lorsque vous naviguez sur notre site. Nous n'utilisons pas de cookies pour suivre votre comportement ni pour créer des profils utilisateurs."
+    },
+    "analytics": {
+      "title": "Analyses du site",
+      "text": "Nous utilisons Fathom Analytics, un service d'analyse respectueux de la vie privée. Fathom est conçu pour être conforme au RGPD et à la Loi 25 du Québec sans nécessiter de consentement. Voici ce que Fathom ne fait PAS:",
+      "item1": "Aucun cookie utilisé",
+      "item2": "Aucune adresse IP stockée",
+      "item3": "Aucun suivi entre les sites",
+      "item4": "Aucune donnée personnelle collectée"
+    },
+    "thirdParty": {
+      "title": "Services tiers",
+      "text": "Notre site peut contenir des liens vers des services tiers (billetterie, réseaux sociaux). Ces services ont leurs propres politiques de confidentialité et nous vous encourageons à les consulter."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "text": "Conformément à la Loi 25 du Québec, vous avez le droit d'accéder, de rectifier et de supprimer vos données personnelles. Puisque nous ne collectons pas de données personnelles, ces droits ne s'appliquent pas à notre site."
+    },
+    "contact": {
+      "title": "Nous contacter",
+      "text": "Si vous avez des questions concernant cette politique de confidentialité, vous pouvez nous contacter à:"
+    }
   }
 }

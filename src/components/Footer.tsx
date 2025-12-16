@@ -1,5 +1,6 @@
 import React from "react";
-import { useLanguage } from "../context/LanguageContext";
+import { Link } from "react-router-dom";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -45,13 +46,14 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-end items-center py-2">
+        <div className="flex flex-col sm:flex-row justify-between items-center py-2 gap-2">
+          <Link
+            to="/privacy"
+            className="text-xs text-primary/60 hover:text-primary transition-colors"
+          >
+            {t("footer.privacy")}
+          </Link>
           <p className="text-xs text-primary">{t("footer.copyright")}</p>
-          {/* <div className="flex space-x-4">
-            <a href={getRoute('/')} className="text-xs text-primary">
-              {t('footer.privacy')}
-            </a>
-          </div> */}
         </div>
       </div>
     </footer>

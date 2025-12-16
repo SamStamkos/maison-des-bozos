@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 import { useReducedMotion } from "../hooks/useReducedMotion";
 import { INTRO_IMAGES } from "../constants/images";
 import { ANIMATION_CONFIG } from "../constants/animations";

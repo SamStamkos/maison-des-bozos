@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import SEO from "./components/SEO";
 import StructuredData from "./components/StructuredData";
 
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+  
   const [loadingComplete, setLoadingComplete] = useState(() => {
     // Check if user has already seen the loading screen this session
     return sessionStorage.getItem("hasSeenLoading") === "true";
@@ -27,16 +32,22 @@ function App() {
     setLoadingComplete(true);
   };
 
+  // Only show loading screen on home page
+  const showLoading = isHomePage && !loadingComplete;
+
   return (
     <LanguageProvider>
       <SEO />
       <StructuredData />
-      {!loadingComplete ? (
+      {showLoading ? (
         <LoadingScreen onComplete={handleLoadingComplete} />
       ) : (
         <div className="App bg-secondary">
           <Navigation />
-          <Home />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+          </Routes>
           <Footer />
         </div>
       )}
