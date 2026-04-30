@@ -17,6 +17,15 @@
     "donation": {
       "title": "Make a donation to protect Quebec's musical heritage",
       "button": "Make a donation"
+    },
+    "newsletter": {
+      "title": "Stay informed about upcoming concerts",
+      "description": "Subscribe to our newsletter to be the first to hear about our lineup, presale tickets, and news from Maison des Bozos.",
+      "placeholder": "Your email address",
+      "button": "Subscribe",
+      "submitting": "Sending…",
+      "success": "Thanks! Check your inbox to confirm your subscription.",
+      "error": "Something went wrong. Please try again."
     }
   },
   "page": {

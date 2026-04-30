@@ -3,7 +3,7 @@ import { useLanguage } from "../hooks/useLanguage";
 import IntroSection from "../components/IntroSection";
 import ConcertsSection from "../components/ConcertsSection";
 import MuseumSection from "../components/MuseumSection";
-import DonationSection from "../components/DonationSection";
+import NewsletterSection from "../components/NewsletterSection";
 
 const Home: React.FC = () => {
   const { language } = useLanguage();
@@ -38,7 +38,7 @@ const Home: React.FC = () => {
       <IntroSection />
       <ConcertsSection />
       <MuseumSection />
-      <DonationSection />
+      <NewsletterSection />
     </main>
   );
 };

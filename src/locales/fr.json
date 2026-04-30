@@ -17,6 +17,15 @@
     "donation": {
       "title": "Je fais un don pour la protection du patrimoine musical Québécois",
       "button": "Je fais un don"
+    },
+    "newsletter": {
+      "title": "Restez informé des prochains concerts",
+      "description": "Inscrivez-vous à notre infolettre pour recevoir en primeur la programmation, les billets en prévente et les nouvelles de la Maison des Bozos.",
+      "placeholder": "Votre adresse courriel",
+      "button": "S'abonner",
+      "submitting": "Envoi…",
+      "success": "Merci! Vérifiez votre boîte courriel pour confirmer votre inscription.",
+      "error": "Oups, une erreur s'est produite. Veuillez réessayer."
     }
   },
   "page": {
