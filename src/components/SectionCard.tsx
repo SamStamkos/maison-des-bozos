@@ -61,13 +61,13 @@ const SectionCard: React.FC<SectionCardProps> = ({
   // Mobile: full width with padding, Desktop: sticky positioned
   const positionClasses =
     position === "left"
-      ? "mx-4 md:mx-0 md:sticky md:top-8 md:bottom-8 md:left-12 md:w-[450px]"
-      : "mx-4 md:mx-0 md:sticky md:top-8 md:right-12 md:float-right md:w-[450px]";
+      ? "mx-4 md:mx-0 md:sticky md:top-8 md:bottom-8 md:left-12 md:w-[500px]"
+      : "mx-4 md:mx-0 md:sticky md:top-8 md:right-12 md:float-right md:w-[500px]";
 
   return (
     <div
       ref={cardRef}
-      className={`${positionClasses} px-4 md:px-8 py-6 bg-white flex flex-col items-start justify-start space-y-2 shadow-xl rounded-xl ${className}`}
+      className={`${positionClasses} px-4 md:px-8 py-6 bg-white flex flex-col items-start justify-start space-y-2 shadow-2xl rounded-lg ${className}`}
       style={{
         backgroundImage: `
           repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px),
@@ -87,7 +87,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
         {descriptions.map((description, index) => (
           <p
             key={index}
-            className={`text-sm font-medium leading-relaxed transition-all duration-1000 ease-out-quad ${
+            className={`text-base font-medium leading-relaxed transition-all duration-1000 ease-out-quad ${
               showDescriptions
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-4"
