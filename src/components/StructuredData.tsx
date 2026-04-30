@@ -40,7 +40,6 @@ const StructuredData: React.FC = () => {
       longitude: BUSINESS_INFO.geo.longitude,
     },
     email: BUSINESS_INFO.email,
-    telephone: BUSINESS_INFO.telephone,
     priceRange: BUSINESS_INFO.priceRange,
     sameAs: [
       SITE_INFO.facebookPage,

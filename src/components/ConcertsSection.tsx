@@ -14,7 +14,7 @@ const ConcertsSection: React.FC = () => {
       cardTitle={t("home.concerts.title") as string}
       cardDescriptions={[t("home.concerts.description")]}
       cardButtonText={t("home.concerts.button") as string}
-      cardButtonDataGroup="15097"
+      cardButtonDataGroup="15928"
       altTextPrefix="Concerts"
     />
   );

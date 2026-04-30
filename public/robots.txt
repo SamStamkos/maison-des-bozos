@@ -9,7 +9,7 @@ Allow: /
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://chezbozo.com/sitemap.xml
+Sitemap: https://maisondesbozos.com/sitemap.xml
 
 # Crawl-delay (optional, adjust if needed)
 # Crawl-delay: 1

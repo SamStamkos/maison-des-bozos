@@ -4,40 +4,40 @@
 
   <!-- Main page - French -->
   <url>
-    <loc>https://chezbozo.com/</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://maisondesbozos.com/</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="https://chezbozo.com/?lang=en"/>
+      href="https://maisondesbozos.com/?lang=en"/>
     <xhtml:link
       rel="alternate"
       hreflang="fr"
-      href="https://chezbozo.com/?lang=fr"/>
+      href="https://maisondesbozos.com/?lang=fr"/>
   </url>
 
   <!-- Concerts section -->
   <url>
-    <loc>https://chezbozo.com/#concerts</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://maisondesbozos.com/#concerts</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Museum section -->
   <url>
-    <loc>https://chezbozo.com/#musee</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://maisondesbozos.com/#musee</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Donation section -->
   <url>
-    <loc>https://chezbozo.com/#donation</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://maisondesbozos.com/#donation</loc>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -29,7 +29,7 @@ export const SEO_METADATA: Record<Language, SEOMetadata> = {
 };
 
 export const SITE_INFO = {
-  url: "https://chezbozo.com", // Update with actual URL
+  url: "https://maisondesbozos.com",
   siteName: "Maison des Bozos",
   author: "Maison des Bozos",
   twitterHandle: "@maisondesbozos",
@@ -55,7 +55,6 @@ export const BUSINESS_INFO = {
     latitude: 45.4973,
     longitude: -73.5775,
   },
-  email: "info@chezbozo.com",
-  telephone: "+1-XXX-XXX-XXXX", // Update with actual phone
+  email: "info@maisondesbozos.com",
   priceRange: "$$",
 };
