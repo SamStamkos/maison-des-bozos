@@ -12,7 +12,8 @@
     },
     "musee": {
       "title": "The Montreal Museum of Bozos",
-      "button": "Discover the Museum"
+      "button": "Discover the Museum",
+      "comingSoon": "Coming soon"
     },
     "donation": {
       "title": "Make a donation to protect Quebec's musical heritage",

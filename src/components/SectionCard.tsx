@@ -8,6 +8,8 @@ interface SectionCardProps {
   buttonDataGroup?: string;
   className?: string;
   position?: "left" | "right";
+  comingSoon?: boolean;
+  comingSoonText?: string;
 }
 
 const SectionCard: React.FC<SectionCardProps> = ({
@@ -17,6 +19,8 @@ const SectionCard: React.FC<SectionCardProps> = ({
   buttonDataGroup = "15097",
   className = "",
   position = "left",
+  comingSoon = false,
+  comingSoonText,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
@@ -67,7 +71,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`${positionClasses} px-4 md:px-8 py-6 bg-white flex flex-col items-start justify-start space-y-2 shadow-2xl rounded-lg ${className}`}
+      className={`${positionClasses} px-4 md:px-8 py-6 bg-white flex flex-col items-start justify-start space-y-2 md:shadow-xl rounded-lg ${className}`}
       style={{
         backgroundImage: `
           repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px),
@@ -106,13 +110,19 @@ const SectionCard: React.FC<SectionCardProps> = ({
         }`}
         style={{ transitionDelay: `${descriptions.length * 300}ms` }}
       >
-        <button
-          type="button"
-          className="tpos-add-to-cart w-full md:w-auto py-2 px-4 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
-          data-tpos-group={buttonDataGroup}
-        >
-          {buttonText}
-        </button>
+        {comingSoon ? (
+          <span className="text-sm text-primary/90 italic">
+            {comingSoonText ?? "À venir bientôt"}
+          </span>
+        ) : (
+          <button
+            type="button"
+            className="tpos-add-to-cart w-full md:w-auto py-2 px-4 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
+            data-tpos-group={buttonDataGroup}
+          >
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );

@@ -16,6 +16,8 @@ const MuseumSection: React.FC = () => {
       cardButtonText={t("home.musee.button") as string}
       cardButtonDataGroup="14982"
       altTextPrefix="Museum"
+      cardComingSoon
+      cardComingSoonText={t("home.musee.comingSoon") as string}
     />
   );
 };

@@ -3,7 +3,7 @@
     "title": "Maison des Bozos"
   },
   "home": {
-    "title": "Bienvenue chez Bozo",
+    "title": "Bienvenue à la Maison des Bozos!",
     "reserve": "Réserver votre visite",
     "concerts": {
       "title": "Concerts Chez Bozo",
@@ -12,7 +12,8 @@
     },
     "musee": {
       "title": "Le musée des Bozos de Montréal",
-      "button": "Découvrez le musée"
+      "button": "Découvrez le musée",
+      "comingSoon": "À venir bientôt"
     },
     "donation": {
       "title": "Je fais un don pour la protection du patrimoine musical Québécois",

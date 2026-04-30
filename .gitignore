@@ -92,3 +92,6 @@ temp/
 
 # Vercel
 .vercel
+
+# Local agent/plugin tooling
+.omc/

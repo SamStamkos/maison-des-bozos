@@ -4,6 +4,7 @@ import IntroSection from "../components/IntroSection";
 import ConcertsSection from "../components/ConcertsSection";
 import MuseumSection from "../components/MuseumSection";
 import NewsletterSection from "../components/NewsletterSection";
+import DonationSection from "../components/DonationSection";
 
 const Home: React.FC = () => {
   const { language } = useLanguage();
@@ -38,6 +39,7 @@ const Home: React.FC = () => {
       <IntroSection />
       <ConcertsSection />
       <MuseumSection />
+      <DonationSection />
       <NewsletterSection />
     </main>
   );

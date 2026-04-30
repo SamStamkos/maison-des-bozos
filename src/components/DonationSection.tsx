@@ -70,24 +70,21 @@ const DonationSection: React.FC = () => {
         </p>
       </div>
       <div
-        className={`flex justify-center md:justify-start items-center space-x-8 transition-all duration-700 ease-out-quad mt-8 md:mt-0 ${
+        className={`flex flex-col md:flex-row justify-center md:justify-start items-center md:items-center gap-6 md:gap-8 transition-all duration-700 ease-out-quad mt-8 md:mt-6 ${
           showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
         style={{ transitionDelay: "300ms" }}
       >
-        <button
-          type="button"
-          className="py-2 px-4 mt-6 rounded-xs text-primary cursor-pointer border border-primary/70 hover:bg-[#228ed6] hover:text-white hover:border-[#228ed6] transition-colors duration-200"
-        >
-          {t("home.donation.button")}
-        </button>
+        <p className="text-sm leading-relaxed text-center md:text-left">
+          {t("home.donation.contact")}
+        </p>
 
         <img
           src="/fondation.png"
           alt="Maison des Bozos"
           loading="lazy"
           decoding="async"
-          className="w-28"
+          className="w-28 flex-shrink-0"
         />
       </div>
     </section>
