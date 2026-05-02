@@ -23,6 +23,7 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Suivez-nous sur Instagram"
+              onClick={() => window.fathom?.trackEvent("social click: instagram")}
             >
               <img
                 src="/instagram-logo.svg"
@@ -36,6 +37,7 @@ const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Suivez-nous sur Facebook"
+              onClick={() => window.fathom?.trackEvent("social click: facebook")}
             >
               <img
                 src="/facebook-logo.svg"

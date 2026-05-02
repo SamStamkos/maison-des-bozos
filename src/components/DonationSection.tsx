@@ -47,7 +47,7 @@ const DonationSection: React.FC = () => {
     <section
       id="donation"
       ref={sectionRef}
-      className="max-w-screen-2xl px-0 md:px-12 mx-auto relative mt-20"
+      className="max-w-screen-2xl px-4 md:px-12 mx-auto relative mt-20"
       aria-labelledby="donation-title"
     >
       <div className="w-full flex flex-col items-start gap-4">
@@ -70,12 +70,12 @@ const DonationSection: React.FC = () => {
         </p>
       </div>
       <div
-        className={`flex flex-col md:flex-row justify-center md:justify-start items-center md:items-center gap-6 md:gap-8 transition-all duration-700 ease-out-quad mt-8 md:mt-6 ${
+        className={`flex flex-col md:flex-row justify-start items-start md:items-center gap-6 md:gap-8 transition-all duration-700 ease-out-quad mt-8 md:mt-6 ${
           showContent ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
         style={{ transitionDelay: "300ms" }}
       >
-        <p className="text-lg leading-relaxed text-center md:text-left">
+        <p className="text-lg leading-relaxed text-left">
           {t("home.donation.contact")}
         </p>
 

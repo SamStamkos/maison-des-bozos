@@ -13,6 +13,7 @@ interface SectionCardProps {
   position?: "left" | "right";
   comingSoon?: boolean;
   comingSoonText?: string;
+  analyticsLabel?: string;
 }
 
 const SectionCard: React.FC<SectionCardProps> = ({
@@ -27,6 +28,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
   position = "left",
   comingSoon = false,
   comingSoonText,
+  analyticsLabel,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
@@ -161,6 +163,12 @@ const SectionCard: React.FC<SectionCardProps> = ({
                 type="button"
                 className="tpos-add-to-cart w-full md:w-auto py-2 px-4 rounded-xs text-primary text-lg font-medium cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
                 data-tpos-group={buttonDataGroup}
+                onClick={() => {
+                  const eventName = analyticsLabel
+                    ? `reserve ticket: ${analyticsLabel} (${buttonDataGroup})`
+                    : `reserve ticket: ${buttonDataGroup}`;
+                  window.fathom?.trackEvent(eventName);
+                }}
               >
                 {buttonText}
               </button>

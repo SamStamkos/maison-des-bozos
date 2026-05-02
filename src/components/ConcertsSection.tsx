@@ -44,6 +44,7 @@ const ConcertsSection: React.FC = () => {
             buttonText={t("home.concerts.button") as string}
             buttonDataGroup="15928"
             buttonHidden
+            analyticsLabel="opening week"
             ticketTimestamp={t("home.concerts.ticketTimestamp") as string}
             position="left"
           />

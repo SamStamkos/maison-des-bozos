@@ -16,6 +16,7 @@ interface SectionWithCarouselProps {
   sectionId?: string;
   cardComingSoon?: boolean;
   cardComingSoonText?: string;
+  cardAnalyticsLabel?: string;
 }
 
 const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
@@ -31,6 +32,7 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
   sectionId,
   cardComingSoon = false,
   cardComingSoonText,
+  cardAnalyticsLabel,
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -95,6 +97,7 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
           position={cardPosition}
           comingSoon={cardComingSoon}
           comingSoonText={cardComingSoonText}
+          analyticsLabel={cardAnalyticsLabel}
         />
       </div>
     </section>
