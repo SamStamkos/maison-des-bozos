@@ -9,6 +9,30 @@ export const formattedTranslations: Record<
   string,
   Record<Language, React.ReactNode>
 > = {
+  'home.title': {
+    fr: 'Bienvenue à la Maison des Bozos!',
+    en: 'Welcome to the Maison des Bozos',
+  },
+  'home.titleMobileLine1': {
+    fr: 'Bienvenue à',
+    en: 'Welcome to the',
+  },
+  'home.titleMobileLine2': {
+    fr: 'la Maison des Bozos!',
+    en: 'the Maison des Bozos',
+  },
+  'home.musee.title': {
+    fr: 'Le musée des Bozos de Montréal',
+    en: 'The Montreal Museum of Bozos',
+  },
+  'home.musee.titleMobileLine1': {
+    fr: 'Le musée des Bozos',
+    en: 'The Montreal',
+  },
+  'home.musee.titleMobileLine2': {
+    fr: 'de Montréal',
+    en: 'Museum of Bozos',
+  },
   'home.description1': {
     fr: (
       <>
@@ -49,7 +73,7 @@ export const formattedTranslations: Record<
     fr: (
       <>
         Plongez dans l'histoire de la première boîte à chanson d'Amérique. Un
-        mini-musée fascinant qui révèle pour la première fois depuis 1959, la
+        musée fascinant qui révèle pour la première fois depuis 1959, la
         fameuse murale où près de cent personnalités de l'époque, dont{' '}
         <span className="font-bold">Claude Léveillée</span>,{' '}
         <span className="font-bold">Jean-Pierre Ferland</span>,{' '}
@@ -65,7 +89,7 @@ export const formattedTranslations: Record<
     en: (
       <>
         Dive into the history of America's first singer-songwriter venue. A
-        fascinating mini-museum that reveals for the first time since 1959, the
+        fascinating museum that reveals for the first time since 1959, the
         famous mural where nearly one hundred personalities of the era,
         including <span className="font-bold">Claude Léveillée</span>,{' '}
         <span className="font-bold">Jean-Pierre Ferland</span>,{' '}

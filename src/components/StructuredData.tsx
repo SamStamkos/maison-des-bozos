@@ -24,8 +24,8 @@ const StructuredData: React.FC = () => {
     ],
     description:
       language === "fr"
-        ? "Salle de spectacle intime, mini-musée et café-bar au cœur de Montréal. Première boîte à chansons d'Amérique depuis 1959."
-        : "Intimate concert hall, mini-museum and café-bar in the heart of Montreal. America's first song house since 1959.",
+        ? "Salle de spectacle intime, musée et café-bar au cœur de Montréal. Première boîte à chansons d'Amérique depuis 1959."
+        : "Intimate concert hall, museum and café-bar in the heart of Montreal. America's first song house since 1959.",
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS_INFO.address.streetAddress,

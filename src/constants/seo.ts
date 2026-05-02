@@ -15,14 +15,14 @@ export const SEO_METADATA: Record<Language, SEOMetadata> = {
   fr: {
     title: "Maison des Bozos | Salle de spectacle, Musée & Café-Bar à Montréal",
     description:
-      "Découvrez Chez Bozo, lieu mythique au cœur de Montréal. Salle de concerts acoustiques intimes, mini-musée avec la fameuse murale des empreintes, et café-bar Le Lutèce. Première boîte à chansons d'Amérique depuis 1959.",
+      "Découvrez Chez Bozo, lieu mythique au cœur de Montréal. Salle de concerts acoustiques intimes, musée avec la fameuse murale des empreintes, et café-bar Le Lutèce. Première boîte à chansons d'Amérique depuis 1959.",
     keywords:
       "Maison des Bozos, Chez Bozo, concerts Montréal, musée québécois, boîte à chansons, spectacles acoustiques, café-bar Montréal, culture québécoise, patrimoine musical, Le Lutèce, rue Crescent",
   },
   en: {
     title: "House of Bozos | Concert Hall, Museum & Café-Bar in Montreal",
     description:
-      "Discover Chez Bozo, a legendary venue in the heart of Montreal. Intimate acoustic concert hall, mini-museum featuring the famous handprint mural, and Le Lutèce café-bar. America's first song house since 1959.",
+      "Discover Chez Bozo, a legendary venue in the heart of Montreal. Intimate acoustic concert hall, museum featuring the famous handprint mural, and Le Lutèce café-bar. America's first song house since 1959.",
     keywords:
       "House of Bozos, Chez Bozo, Montreal concerts, Quebec museum, song house, acoustic shows, Montreal cafe bar, Quebec culture, musical heritage, Le Lutèce, Crescent Street",
   },
@@ -55,6 +55,6 @@ export const BUSINESS_INFO = {
     latitude: 45.4973,
     longitude: -73.5775,
   },
-  email: "info@maisondesbozos.com",
+  email: "info@chezbozo.com",
   priceRange: "$$",
 };

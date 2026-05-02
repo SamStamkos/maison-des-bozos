@@ -54,13 +54,13 @@ const DonationSection: React.FC = () => {
         <Typewriter
           text={t("home.donation.title") as string}
           as="h2"
-          className="text-lg font-medium uppercase tracking-wide lg:whitespace-nowrap"
+          className="text-lg md:text-xl font-medium uppercase tracking-wide lg:whitespace-nowrap"
           speed={50}
           delay={200}
           enabled={isInView}
         />
         <p
-          className={`text-sm w-full md:w-4/5 leading-relaxed transition-all duration-1000 ease-out-quad ${
+          className={`text-lg w-full md:w-4/5 leading-relaxed transition-all duration-1000 ease-out-quad ${
             showContent
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-4"
@@ -75,7 +75,7 @@ const DonationSection: React.FC = () => {
         }`}
         style={{ transitionDelay: "300ms" }}
       >
-        <p className="text-sm leading-relaxed text-center md:text-left">
+        <p className="text-lg leading-relaxed text-center md:text-left">
           {t("home.donation.contact")}
         </p>
 

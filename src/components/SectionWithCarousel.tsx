@@ -7,9 +7,11 @@ interface SectionWithCarouselProps {
   images: readonly string[];
   imagePosition: "left" | "right";
   cardTitle: string | TranslationKeys;
+  cardTitleMobileLines?: [string, string];
   cardDescriptions: (string | React.ReactNode)[];
   cardButtonText: string;
   cardButtonDataGroup?: string;
+  cardTicketTimestamp?: string;
   altTextPrefix: string;
   sectionId?: string;
   cardComingSoon?: boolean;
@@ -20,9 +22,11 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
   images,
   imagePosition,
   cardTitle,
+  cardTitleMobileLines,
   cardDescriptions,
   cardButtonText,
   cardButtonDataGroup = "15097",
+  cardTicketTimestamp,
   altTextPrefix,
   sectionId,
   cardComingSoon = false,
@@ -83,9 +87,11 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
       <div className="mt-8 md:mt-0 md:h-full">
         <SectionCard
           title={cardTitle as string}
+          titleMobileLines={cardTitleMobileLines}
           descriptions={cardDescriptions}
           buttonText={cardButtonText}
           buttonDataGroup={cardButtonDataGroup}
+          ticketTimestamp={cardTicketTimestamp}
           position={cardPosition}
           comingSoon={cardComingSoon}
           comingSoonText={cardComingSoonText}

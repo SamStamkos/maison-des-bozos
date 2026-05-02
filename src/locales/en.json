@@ -3,17 +3,16 @@
     "title": "Maison des Bozos"
   },
   "home": {
-    "title": "Welcome to Chez Bozo",
     "reserve": "Book your visit",
     "concerts": {
       "title": "Chez Bozo Concerts",
       "description": "Discover our intimate acoustic concerts in a legendary venue steeped in history. Experience a unique musical experience in the heart of downtown Montreal! Check our calendar and…",
-      "button": "Book your tickets"
+      "button": "Book your tickets",
+      "ticketTimestamp": "Book your tickets for opening week, starting May 2nd at noon."
     },
     "musee": {
-      "title": "The Montreal Museum of Bozos",
       "button": "Discover the Museum",
-      "comingSoon": "Coming soon"
+      "comingSoon": "Opening scheduled for July 2026"
     },
     "donation": {
       "title": "Make a donation to protect Quebec's musical heritage",
@@ -36,7 +35,7 @@
     }
   },
   "footer": {
-    "email": "info@maisondesbozos.com",
+    "email": "info@chezbozo.com",
     "address": "1208 Crescent St,\nMontreal, QC\nH3G 2A9",
     "copyright": "© 2025 House of Bozos.",
     "privacy": "Privacy Policy"

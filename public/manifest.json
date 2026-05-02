@@ -1,7 +1,7 @@
 {
   "name": "Maison des Bozos",
   "short_name": "Chez Bozo",
-  "description": "Salle de spectacle, mini-musée et café-bar au cœur de Montréal. Première boîte à chansons d'Amérique depuis 1959.",
+  "description": "Salle de spectacle, musée et café-bar au cœur de Montréal. Première boîte à chansons d'Amérique depuis 1959.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#212122",

@@ -10,10 +10,10 @@ const Footer: React.FC = () => {
       <div className="max-w-screen-2xl px-4 md:px-12 mx-auto">
         <div className="flex justify-between items-end py-4 border-b border-primary/20">
           <div className="">
-            <p className="text-sm font-medium text-primary">
+            <p className="text-base font-medium text-primary">
               <a href={`mailto:${t("footer.email")}`}>{t("footer.email")}</a>
             </p>
-            <p className="text-sm font-medium text-primary whitespace-pre-line">
+            <p className="text-base font-medium text-primary whitespace-pre-line">
               {t("footer.address")}
             </p>
           </div>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <a
-              href="https://www.facebook.com/maisondesbozos/"
+              href="https://www.facebook.com/p/Maison-des-Bozos-61583520084135/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Suivez-nous sur Facebook"
@@ -49,11 +49,11 @@ const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center py-2 gap-2">
           <Link
             to="/privacy"
-            className="text-xs text-primary/60 hover:text-primary transition-colors"
+            className="text-base text-primary/60 hover:text-primary transition-colors"
           >
             {t("footer.privacy")}
           </Link>
-          <p className="text-xs text-primary">{t("footer.copyright")}</p>
+          <p className="text-base text-primary">{t("footer.copyright")}</p>
         </div>
       </div>
     </footer>

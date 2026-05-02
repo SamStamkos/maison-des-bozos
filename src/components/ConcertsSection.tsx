@@ -43,6 +43,8 @@ const ConcertsSection: React.FC = () => {
             descriptions={[t("home.concerts.description")]}
             buttonText={t("home.concerts.button") as string}
             buttonDataGroup="15928"
+            buttonHidden
+            ticketTimestamp={t("home.concerts.ticketTimestamp") as string}
             position="left"
           />
         </div>

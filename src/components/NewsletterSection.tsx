@@ -71,11 +71,11 @@ const NewsletterSection: React.FC = () => {
         <div className="flex flex-col items-start gap-4">
           <h2
             id="newsletter-title"
-            className="text-lg font-medium uppercase tracking-wide lg:whitespace-nowrap"
+            className="text-lg md:text-xl font-medium uppercase tracking-wide lg:whitespace-nowrap"
           >
             {t("home.newsletter.title") as string}
           </h2>
-          <p className="text-base w-full md:w-4/5 leading-relaxed">
+          <p className="text-lg w-full md:w-4/5 leading-relaxed">
             {t("home.newsletter.description")}
           </p>
         </div>

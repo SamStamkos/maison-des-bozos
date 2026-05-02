@@ -12,6 +12,10 @@ const MuseumSection: React.FC = () => {
       images={MUSEUM_IMAGES}
       imagePosition="left"
       cardTitle={t("home.musee.title") as string}
+      cardTitleMobileLines={[
+        t("home.musee.titleMobileLine1") as string,
+        t("home.musee.titleMobileLine2") as string,
+      ]}
       cardDescriptions={[t("home.musee.description")]}
       cardButtonText={t("home.musee.button") as string}
       cardButtonDataGroup="14982"

@@ -179,15 +179,31 @@ const IntroSection: React.FC = () => {
           className="col-span-1 md:col-span-7 px-0 md:px-12 self-center mb-12 md:mb-0"
         >
           <div className="space-y-4 px-4">
-            <Typewriter
-              text={t("home.title") as string}
-              as="h1"
-              className="text-lg font-medium uppercase tracking-wide whitespace-nowrap"
-              speed={80}
-              delay={1050}
-            />
+            <h1 className="text-lg md:text-xl font-medium uppercase tracking-wide">
+              <Typewriter
+                text={t("home.title") as string}
+                as="span"
+                className="hidden md:inline"
+                speed={80}
+                delay={1050}
+              />
+              <Typewriter
+                text={t("home.titleMobileLine1") as string}
+                as="span"
+                className="block md:hidden"
+                speed={80}
+                delay={1050}
+              />
+              <Typewriter
+                text={t("home.titleMobileLine2") as string}
+                as="span"
+                className="block md:hidden"
+                speed={80}
+                delay={1050 + (t("home.titleMobileLine1") as string).length * 80}
+              />
+            </h1>
             <p
-              className={`text-sm font-medium leading-relaxed md:text-justify transition-all duration-1500 ease-out-quad ${
+              className={`text-lg font-medium leading-relaxed md:text-justify transition-all duration-1500 ease-out-quad ${
                 showDescriptions
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"

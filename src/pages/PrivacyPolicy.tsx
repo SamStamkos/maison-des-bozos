@@ -75,10 +75,10 @@ const PrivacyPolicy = () => {
             <p>
               {t("privacy.contact.text")}{" "}
               <a
-                href="mailto:info@maisondesbozos.com"
+                href="mailto:info@chezbozo.com"
                 className="underline hover:text-primary"
               >
-                info@maisondesbozos.com
+                info@chezbozo.com
               </a>
             </p>
           </section>
