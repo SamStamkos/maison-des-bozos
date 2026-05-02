@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from "react";
-import { ANIMATION_CONFIG } from "../constants/animations";
-import SectionCard from "./SectionCard";
-import TranslationKeys from "../types/translations";
+import React, { useEffect, useState } from 'react'
+import { ANIMATION_CONFIG } from '../constants/animations'
+import SectionCard from './SectionCard'
+import TranslationKeys from '../types/translations'
 
 interface SectionWithCarouselProps {
-  images: readonly string[];
-  imagePosition: "left" | "right";
-  cardTitle: string | TranslationKeys;
-  cardTitleMobileLines?: [string, string];
-  cardDescriptions: (string | React.ReactNode)[];
-  cardButtonText: string;
-  cardButtonDataGroup?: string;
-  cardTicketTimestamp?: string;
-  altTextPrefix: string;
-  sectionId?: string;
-  cardComingSoon?: boolean;
-  cardComingSoonText?: string;
-  cardAnalyticsLabel?: string;
+  images: readonly string[]
+  imagePosition: 'left' | 'right'
+  cardTitle: string | TranslationKeys
+  cardTitleMobileLines?: [string, string]
+  cardDescriptions: (string | React.ReactNode)[]
+  cardButtonText: string
+  cardButtonDataGroup?: string
+  altTextPrefix: string
+  sectionId?: string
+  cardComingSoon?: boolean
+  cardComingSoonText?: string
+  cardAnalyticsLabel?: string
 }
 
 const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
@@ -26,33 +25,30 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
   cardTitleMobileLines,
   cardDescriptions,
   cardButtonText,
-  cardButtonDataGroup = "15097",
-  cardTicketTimestamp,
+  cardButtonDataGroup = '15097',
   altTextPrefix,
   sectionId,
   cardComingSoon = false,
   cardComingSoonText,
   cardAnalyticsLabel,
 }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   // Auto-cycle through images with crossfade
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % images.length
-      );
-    }, ANIMATION_CONFIG.carousel.interval);
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, ANIMATION_CONFIG.carousel.interval)
 
-    return () => clearInterval(intervalId);
-  }, [images.length]);
+    return () => clearInterval(intervalId)
+  }, [images.length])
 
   const imagePositionClasses =
-    imagePosition === "left"
-      ? "px-4 md:px-0 md:absolute md:inset-y-0 md:left-12 flex items-center justify-end md:w-7/10"
-      : "px-4 md:px-0 md:absolute md:inset-y-0 md:right-12 flex items-center justify-start md:w-7/10";
+    imagePosition === 'left'
+      ? 'px-4 md:px-0 md:absolute md:inset-y-0 md:left-12 flex items-center justify-end md:w-7/10'
+      : 'px-4 md:px-0 md:absolute md:inset-y-0 md:right-12 flex items-center justify-start md:w-7/10'
 
-  const cardPosition = imagePosition === "left" ? "right" : "left";
+  const cardPosition = imagePosition === 'left' ? 'right' : 'left'
 
   return (
     <section
@@ -68,17 +64,17 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
             <picture
               key={image}
               className={`absolute inset-0 w-full h-full transition-opacity duration-${ANIMATION_CONFIG.carousel.imageFadeDuration} ${
-                index === currentImageIndex ? "opacity-100" : "opacity-0"
+                index === currentImageIndex ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <source
-                srcSet={image.replace(/\.(jpg|jpeg)$/i, ".webp")}
+                srcSet={image.replace(/\.(jpg|jpeg)$/i, '.webp')}
                 type="image/webp"
               />
               <img
                 src={image}
                 alt={`${altTextPrefix} à la Maison des Bozos - Photo ${index + 1} sur ${images.length}`}
-                loading={index === 0 ? "eager" : "lazy"}
+                loading={index === 0 ? 'eager' : 'lazy'}
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-contain"
               />
@@ -93,7 +89,6 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
           descriptions={cardDescriptions}
           buttonText={cardButtonText}
           buttonDataGroup={cardButtonDataGroup}
-          ticketTimestamp={cardTicketTimestamp}
           position={cardPosition}
           comingSoon={cardComingSoon}
           comingSoonText={cardComingSoonText}
@@ -101,7 +96,7 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
         />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default React.memo(SectionWithCarousel);
+export default React.memo(SectionWithCarousel)

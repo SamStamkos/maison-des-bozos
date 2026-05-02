@@ -1,12 +1,12 @@
-import React from "react";
-import { useLanguage } from "../hooks/useLanguage";
-import SectionCard from "./SectionCard";
+import React from 'react'
+import { useLanguage } from '../hooks/useLanguage'
+import SectionCard from './SectionCard'
 
-const POSTER_JPG = "/chez-bozo-affiche.jpg";
-const POSTER_WEBP = "/chez-bozo-affiche.webp";
+const POSTER_JPG = '/chez-bozo-affiche.jpg'
+const POSTER_WEBP = '/chez-bozo-affiche.webp'
 
 const ConcertsSection: React.FC = () => {
-  const { t } = useLanguage();
+  const { t } = useLanguage()
 
   return (
     <section
@@ -39,18 +39,17 @@ const ConcertsSection: React.FC = () => {
             poster so it paints on top. SectionCard's own md:sticky pins it. */}
         <div className="mt-8 md:mt-0 md:ml-12 md:col-start-1 md:row-start-1 md:justify-self-start md:z-10">
           <SectionCard
-            title={t("home.concerts.title") as string}
-            descriptions={[t("home.concerts.description")]}
-            buttonText={t("home.concerts.button") as string}
+            title={t('home.concerts.title') as string}
+            descriptions={[t('home.concerts.description')]}
+            buttonText={t('home.concerts.button') as string}
             buttonDataGroup="15928"
             analyticsLabel="opening week"
-            ticketTimestamp={t("home.concerts.ticketTimestamp") as string}
             position="left"
           />
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default React.memo(ConcertsSection);
+export default React.memo(ConcertsSection)

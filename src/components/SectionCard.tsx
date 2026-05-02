@@ -8,7 +8,6 @@ interface SectionCardProps {
   buttonText: string;
   buttonDataGroup?: string;
   buttonHidden?: boolean;
-  ticketTimestamp?: string;
   className?: string;
   position?: "left" | "right";
   comingSoon?: boolean;
@@ -23,7 +22,6 @@ const SectionCard: React.FC<SectionCardProps> = ({
   buttonText,
   buttonDataGroup = "15097",
   buttonHidden = false,
-  ticketTimestamp,
   className = "",
   position = "left",
   comingSoon = false,
@@ -153,11 +151,6 @@ const SectionCard: React.FC<SectionCardProps> = ({
           </span>
         ) : (
           <>
-            {ticketTimestamp && (
-              <div className="text-lg font-bold text-primary italic">
-                {ticketTimestamp}
-              </div>
-            )}
             {!buttonHidden && (
               <button
                 type="button"

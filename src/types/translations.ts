@@ -13,7 +13,6 @@ type TranslationKeys =
   | "home.concerts.title"
   | "home.concerts.description"
   | "home.concerts.button"
-  | "home.concerts.ticketTimestamp"
   | "home.musee.title"
   | "home.musee.titleMobileLine1"
   | "home.musee.titleMobileLine2"
