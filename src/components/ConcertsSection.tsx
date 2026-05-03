@@ -11,7 +11,7 @@ const ConcertsSection: React.FC = () => {
   return (
     <section
       id="concerts"
-      className="relative bg-secondary z-10 w-full py-4 md:py-12"
+      className="relative bg-secondary z-10 w-full py-4 md:py-24"
       aria-labelledby="section-right"
     >
       {/* Desktop: grid with both children in the same cell so the card overlays
