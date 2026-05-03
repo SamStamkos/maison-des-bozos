@@ -53,11 +53,29 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
   return (
     <section
       id={sectionId}
-      className="max-w-screen-2xl px-0 md:px-12 mx-auto relative bg-secondary z-10 w-full py-4 md:py-12 md:h-screen"
+      className="max-w-[2000px] px-0 md:px-12 mx-auto relative bg-secondary z-10 w-full py-4 md:py-24 md:h-screen"
       aria-labelledby={`section-${imagePosition}`}
     >
-      {/* Mobile: stacked layout, Desktop: absolute positioning */}
-      <div className={imagePositionClasses}>
+      {/* Desktop-only top fade: blends the previous section into this one */}
+      <div
+        aria-hidden="true"
+        className="hidden md:block absolute inset-x-0 top-0 -translate-y-full h-8 bg-gradient-to-b from-transparent to-secondary pointer-events-none z-20"
+      />
+      {/* Mobile: card first then image, Desktop: image absolute-positioned */}
+      <div className="md:h-full md:relative md:z-10">
+        <SectionCard
+          title={cardTitle as string}
+          titleMobileLines={cardTitleMobileLines}
+          descriptions={cardDescriptions}
+          buttonText={cardButtonText}
+          buttonDataGroup={cardButtonDataGroup}
+          position={cardPosition}
+          comingSoon={cardComingSoon}
+          comingSoonText={cardComingSoonText}
+          analyticsLabel={cardAnalyticsLabel}
+        />
+      </div>
+      <div className={`mt-8 md:mt-0 ${imagePositionClasses}`}>
         <div className="relative w-full aspect-[5/3] overflow-hidden rounded-xs">
           {/* Crossfade images */}
           {images.map((image, index) => (
@@ -81,19 +99,6 @@ const SectionWithCarousel: React.FC<SectionWithCarouselProps> = ({
             </picture>
           ))}
         </div>
-      </div>
-      <div className="mt-8 md:mt-0 md:h-full">
-        <SectionCard
-          title={cardTitle as string}
-          titleMobileLines={cardTitleMobileLines}
-          descriptions={cardDescriptions}
-          buttonText={cardButtonText}
-          buttonDataGroup={cardButtonDataGroup}
-          position={cardPosition}
-          comingSoon={cardComingSoon}
-          comingSoonText={cardComingSoonText}
-          analyticsLabel={cardAnalyticsLabel}
-        />
       </div>
     </section>
   )

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import IntroSection from "../components/IntroSection";
 import ConcertsSection from "../components/ConcertsSection";
+import CarouselSection from "../components/CarouselSection";
 import MuseumSection from "../components/MuseumSection";
 import NewsletterSection from "../components/NewsletterSection";
 import DonationSection from "../components/DonationSection";
@@ -38,7 +39,10 @@ const Home: React.FC = () => {
     <main className="min-h-screen bg-secondary">
       <IntroSection />
       <ConcertsSection />
-      <MuseumSection />
+      <CarouselSection />
+      <div className="md:relative md:z-10 md:-mt-[50vh]">
+        <MuseumSection />
+      </div>
       <DonationSection />
       <NewsletterSection />
     </main>

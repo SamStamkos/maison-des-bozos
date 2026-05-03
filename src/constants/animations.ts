@@ -12,7 +12,7 @@ export const ANIMATION_CONFIG: AnimationConfig = {
     fadeInDuration: 400,
   },
   carousel: {
-    interval: 3000,
+    interval: 5000,
     transitionDuration: 2,
     imageFadeDuration: 1000,
   },
