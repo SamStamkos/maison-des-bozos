@@ -53,6 +53,10 @@ type TranslationKeys =
   | "privacy.rights.title"
   | "privacy.rights.text"
   | "privacy.contact.title"
-  | "privacy.contact.text";
+  | "privacy.contact.text"
+  | "newsletterConfirmation.title"
+  | "newsletterConfirmation.description"
+  | "newsletterConfirmation.followUp"
+  | "newsletterConfirmation.backHome";
 
 export default TranslationKeys;

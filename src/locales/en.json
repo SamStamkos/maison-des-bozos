@@ -70,5 +70,11 @@
       "title": "Contact Us",
       "text": "If you have any questions about this privacy policy, you can reach us at:"
     }
+  },
+  "newsletterConfirmation": {
+    "title": "Subscription confirmed!",
+    "description": "Thank you! Your subscription to the Maison des Bozos newsletter is now confirmed.",
+    "followUp": "You'll be the first to hear about our lineup, presale tickets, and news from Maison des Bozos.",
+    "backHome": "Back to home"
   }
 }

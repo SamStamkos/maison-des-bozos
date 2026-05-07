@@ -4,6 +4,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import NewsletterConfirmation from "./pages/NewsletterConfirmation";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import SEO from "./components/SEO";
@@ -47,6 +48,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route
+              path="/inscription-confirmee"
+              element={<NewsletterConfirmation />}
+            />
           </Routes>
           <Footer />
         </div>
