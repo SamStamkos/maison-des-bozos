@@ -76,5 +76,11 @@
     "description": "Merci! Votre inscription à l'infolettre de la Maison des Bozos est maintenant confirmée.",
     "followUp": "Vous recevrez en primeur la programmation, les billets en prévente et les nouvelles de la Maison des Bozos.",
     "backHome": "Retour à l'accueil"
+  },
+  "notFound": {
+    "code": "Erreur 404",
+    "title": "Page introuvable",
+    "description": "La page que vous cherchez n'existe pas ou a été déplacée. Retournez à l'accueil pour explorer la Maison des Bozos.",
+    "backHome": "Retour à l'accueil"
   }
 }

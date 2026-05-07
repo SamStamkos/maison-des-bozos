@@ -76,5 +76,11 @@
     "description": "Thank you! Your subscription to the Maison des Bozos newsletter is now confirmed.",
     "followUp": "You'll be the first to hear about our lineup, presale tickets, and news from Maison des Bozos.",
     "backHome": "Back to home"
+  },
+  "notFound": {
+    "code": "Error 404",
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved. Head back to the home page to explore the Maison des Bozos.",
+    "backHome": "Back to home"
   }
 }

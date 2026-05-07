@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NewsletterConfirmation from "./pages/NewsletterConfirmation";
+import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import SEO from "./components/SEO";
@@ -52,6 +53,7 @@ function App() {
               path="/inscription-confirmee"
               element={<NewsletterConfirmation />}
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>

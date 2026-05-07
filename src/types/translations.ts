@@ -57,6 +57,10 @@ type TranslationKeys =
   | "newsletterConfirmation.title"
   | "newsletterConfirmation.description"
   | "newsletterConfirmation.followUp"
-  | "newsletterConfirmation.backHome";
+  | "newsletterConfirmation.backHome"
+  | "notFound.code"
+  | "notFound.title"
+  | "notFound.description"
+  | "notFound.backHome";
 
 export default TranslationKeys;
