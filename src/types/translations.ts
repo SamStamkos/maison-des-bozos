@@ -30,6 +30,7 @@ type TranslationKeys =
   | "home.newsletter.submitting"
   | "home.newsletter.success"
   | "home.newsletter.error"
+  | "home.remerciements.alt"
   | "page.concerts.description"
   | "page.concerts.viewTickets"
   | "footer.email"

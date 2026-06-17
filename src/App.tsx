@@ -10,10 +10,14 @@ import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import SEO from "./components/SEO";
 import StructuredData from "./components/StructuredData";
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
 
 function App() {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+
+  // Lenis smooth scrolling, synced with GSAP/ScrollTrigger (respects reduced motion)
+  useSmoothScroll();
   
   const [loadingComplete, setLoadingComplete] = useState(() => {
     // Check if user has already seen the loading screen this session

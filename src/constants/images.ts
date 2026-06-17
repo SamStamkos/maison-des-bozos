@@ -24,3 +24,5 @@ export const MUSEUM_IMAGES = [
   '/musee/musee-3.jpg',
   '/musee/musee-4.jpg',
 ] as const
+
+export const REMERCIEMENTS_IMAGE = '/remerciements/remerciements.jpg' as const

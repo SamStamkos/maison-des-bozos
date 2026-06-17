@@ -6,6 +6,7 @@ import CarouselSection from "../components/CarouselSection";
 import MuseumSection from "../components/MuseumSection";
 import NewsletterSection from "../components/NewsletterSection";
 import DonationSection from "../components/DonationSection";
+import RemerciementsSection from "../components/RemerciementsSection";
 
 const Home: React.FC = () => {
   const { language } = useLanguage();
@@ -45,6 +46,7 @@ const Home: React.FC = () => {
       </div>
       <DonationSection />
       <NewsletterSection />
+      <RemerciementsSection />
     </main>
   );
 };

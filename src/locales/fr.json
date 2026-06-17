@@ -25,6 +25,9 @@
       "submitting": "Envoi…",
       "success": "Merci! Vérifiez votre boîte courriel pour confirmer votre inscription.",
       "error": "Oups, une erreur s'est produite. Veuillez réessayer."
+    },
+    "remerciements": {
+      "alt": "Affiche de remerciements aux partenaires de la Maison des Bozos"
     }
   },
   "page": {
