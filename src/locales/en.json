@@ -25,6 +25,9 @@
       "submitting": "Sending…",
       "success": "Thanks! Check your inbox to confirm your subscription.",
       "error": "Something went wrong. Please try again."
+    },
+    "remerciements": {
+      "alt": "Poster thanking the partners of la Maison des Bozos"
     }
   },
   "page": {
