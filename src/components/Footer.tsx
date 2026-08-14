@@ -55,7 +55,9 @@ const Footer: React.FC = () => {
           >
             {t("footer.privacy")}
           </Link>
-          <p className="text-base text-primary">{t("footer.copyright")}</p>
+          <p className="text-base text-primary">
+            © {new Date().getFullYear()} {t("footer.copyright")}
+          </p>
         </div>
       </div>
     </footer>

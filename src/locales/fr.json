@@ -23,7 +23,7 @@
       "placeholder": "Votre adresse courriel",
       "button": "S'abonner",
       "submitting": "Envoi…",
-      "success": "Merci! Vérifiez votre boîte courriel pour confirmer votre inscription.",
+      "success": "Merci! Vérifiez votre boîte courriel pour confirmer votre inscription. Si vous n'avez rien reçu, vérifiez votre courrier indésirable!",
       "error": "Oups, une erreur s'est produite. Veuillez réessayer."
     },
     "remerciements": {
@@ -36,10 +36,16 @@
       "viewTickets": "Réserver dès maintenant"
     }
   },
+  "cookies": {
+    "message": "Nous utilisons des témoins (cookies) à des fins statistiques afin d'améliorer votre expérience.",
+    "learnMore": "En savoir plus",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
   "footer": {
     "email": "info@chezbozo.com",
     "address": "1208 Rue Crescent, \nMontréal, QC \nH3G 2A9",
-    "copyright": "© 2025 Maison des Bozos.",
+    "copyright": "Maison des Bozos.",
     "privacy": "Politique de confidentialité"
   },
   "privacy": {
@@ -51,7 +57,7 @@
     },
     "collection": {
       "title": "Collecte de données personnelles",
-      "text": "Nous ne collectons aucune donnée personnelle identifiable lorsque vous naviguez sur notre site. Nous n'utilisons pas de cookies pour suivre votre comportement ni pour créer des profils utilisateurs."
+      "text": "Nous ne collectons aucune donnée personnelle identifiable lorsque vous naviguez sur notre site. Des témoins (cookies) d'analyse sont utilisés uniquement si vous les acceptez via notre bannière de consentement."
     },
     "analytics": {
       "title": "Analyses du site",
@@ -59,7 +65,9 @@
       "item1": "Aucun cookie utilisé",
       "item2": "Aucune adresse IP stockée",
       "item3": "Aucun suivi entre les sites",
-      "item4": "Aucune donnée personnelle collectée"
+      "item4": "Aucune donnée personnelle collectée",
+      "googleText": "Avec votre consentement, nous utilisons également Google Analytics, un service fourni par Google LLC, afin de mieux comprendre l'utilisation de notre site (pages visitées, provenance des visiteurs, type d'appareil). Google Analytics dépose des témoins (cookies) dans votre navigateur (notamment « _ga ») et les données recueillies peuvent être traitées sur des serveurs situés à l'extérieur du Québec, notamment aux États-Unis. Ce service n'est activé que si vous l'acceptez via notre bannière de consentement, et vous pouvez retirer votre consentement en tout temps en supprimant les témoins de votre navigateur. Pour en savoir plus, consultez la",
+      "googleLink": "politique de confidentialité de Google"
     },
     "thirdParty": {
       "title": "Services tiers",
@@ -67,7 +75,7 @@
     },
     "rights": {
       "title": "Vos droits",
-      "text": "Conformément à la Loi 25 du Québec, vous avez le droit d'accéder, de rectifier et de supprimer vos données personnelles. Puisque nous ne collectons pas de données personnelles, ces droits ne s'appliquent pas à notre site."
+      "text": "Conformément à la Loi 25 du Québec, vous avez le droit d'accéder à vos données personnelles, de les rectifier et de les supprimer, ainsi que de retirer en tout temps votre consentement aux témoins d'analyse. Pour toute demande, contactez-nous à l'adresse ci-dessous."
     },
     "contact": {
       "title": "Nous contacter",
