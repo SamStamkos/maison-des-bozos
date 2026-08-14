@@ -6,8 +6,10 @@
     "reserve": "Book your visit",
     "concerts": {
       "title": "Chez Bozo Concerts",
-      "description": "Discover our intimate acoustic concerts in a legendary venue steeped in history. Experience a unique musical experience in the heart of downtown Montreal! Check our calendar and…",
-      "button": "Book your tickets"
+      "titleLine1": "Chez Bozo",
+      "titleLine2": "Concerts",
+      "description": "Discover our intimate acoustic concerts in a legendary venue steeped in history. Experience a unique musical experience in the heart of downtown Montreal!",
+      "button": "Discover the lineup"
     },
     "musee": {
       "button": "Discover the Museum",

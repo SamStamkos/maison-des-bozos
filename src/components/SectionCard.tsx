@@ -13,6 +13,8 @@ interface SectionCardProps {
   comingSoon?: boolean;
   comingSoonText?: string;
   analyticsLabel?: string;
+  /** "feature": large two-line title, full-width bold button (concerts mockup) */
+  variant?: "default" | "feature";
 }
 
 const SectionCard: React.FC<SectionCardProps> = ({
@@ -27,7 +29,9 @@ const SectionCard: React.FC<SectionCardProps> = ({
   comingSoon = false,
   comingSoonText,
   analyticsLabel,
+  variant = "default",
 }) => {
+  const isFeature = variant === "feature";
   const cardRef = useRef<HTMLDivElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [showDescriptions, setShowDescriptions] = useState(false);
@@ -69,15 +73,18 @@ const SectionCard: React.FC<SectionCardProps> = ({
   }, [isInView]);
 
   // Mobile: full width with padding, Desktop: sticky positioned
+  const cardWidth = isFeature ? "md:w-[600px]" : "md:w-[520px]";
   const positionClasses =
     position === "left"
-      ? "mx-4 md:mx-0 md:sticky md:top-8 md:bottom-8 md:left-12 md:w-[520px]"
-      : "mx-4 md:mx-0 md:sticky md:top-8 md:right-12 md:float-right md:w-[520px]";
+      ? `mx-4 md:mx-0 md:sticky md:top-8 md:bottom-8 md:left-12 ${cardWidth}`
+      : `mx-4 md:mx-0 md:sticky md:top-8 md:right-12 md:float-right ${cardWidth}`;
 
   return (
     <div
       ref={cardRef}
-      className={`${positionClasses} px-4 md:px-6 py-6 bg-white flex flex-col items-start justify-start space-y-4 md:shadow-xl rounded-lg ${className}`}
+      className={`${positionClasses} ${
+        isFeature ? "px-6 md:px-8 py-8 md:py-10" : "px-4 md:px-6 py-6"
+      } bg-white flex flex-col items-start justify-start space-y-4 md:shadow-xl rounded-lg ${className}`}
       style={{
         backgroundImage: `
           repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,.02) 2px, rgba(0,0,0,.02) 4px),
@@ -85,7 +92,26 @@ const SectionCard: React.FC<SectionCardProps> = ({
         `,
       }}
     >
-      {titleMobileLines ? (
+      {isFeature && titleMobileLines ? (
+        <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight leading-tight">
+          <Typewriter
+            text={titleMobileLines[0]}
+            as="span"
+            className="block"
+            speed={100}
+            delay={200}
+            enabled={isInView}
+          />
+          <Typewriter
+            text={titleMobileLines[1]}
+            as="span"
+            className="block"
+            speed={100}
+            delay={200 + titleMobileLines[0].length * 100}
+            enabled={isInView}
+          />
+        </h2>
+      ) : titleMobileLines ? (
         <h2 className="text-lg md:text-xl font-medium uppercase tracking-wide">
           <Typewriter
             text={title}
@@ -138,7 +164,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
         ))}
       </div>
       <div
-        className={`w-full md:w-auto mt-6 transition-all duration-700 ease-out-quad ${
+        className={`w-full ${isFeature ? "" : "md:w-auto"} mt-6 transition-all duration-700 ease-out-quad ${
           showDescriptions
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4"
@@ -154,7 +180,11 @@ const SectionCard: React.FC<SectionCardProps> = ({
             {!buttonHidden && (
               <button
                 type="button"
-                className="tpos-add-to-cart w-full md:w-auto py-2 px-4 rounded-xs text-primary text-lg font-medium cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
+                className={
+                  isFeature
+                    ? "tpos-add-to-cart w-full py-3 px-6 rounded-xs text-primary text-lg font-bold uppercase tracking-wide text-center cursor-pointer border-2 border-primary hover:bg-primary hover:text-white transition-colors duration-200"
+                    : "tpos-add-to-cart w-full md:w-auto py-2 px-4 rounded-xs text-primary text-lg font-medium cursor-pointer border border-primary/70 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200"
+                }
                 data-tpos-group={buttonDataGroup}
                 onClick={() => {
                   const eventName = analyticsLabel

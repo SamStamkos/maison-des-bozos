@@ -11,6 +11,8 @@ type TranslationKeys =
   | "home.description1"
   | "home.reserve"
   | "home.concerts.title"
+  | "home.concerts.titleLine1"
+  | "home.concerts.titleLine2"
   | "home.concerts.description"
   | "home.concerts.button"
   | "home.musee.title"

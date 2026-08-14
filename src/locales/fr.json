@@ -6,8 +6,10 @@
     "reserve": "Réserver votre visite",
     "concerts": {
       "title": "Concerts Chez Bozo",
-      "description": "Découvrez nos concerts intimes et acoustiques dans un lieu mythique chargé d'histoire. Vivez une expérience musicale unique au cœur du centre-ville de Montréal! Consultez notre calendrier et…",
-      "button": "Réservez vos billets"
+      "titleLine1": "Concerts",
+      "titleLine2": "Chez Bozo",
+      "description": "Découvrez nos concerts intimes et acoustiques dans un lieu mythique chargé d'histoire. Vivez une expérience musicale unique au cœur du centre-ville de Montréal!",
+      "button": "Découvrez la programmation"
     },
     "musee": {
       "button": "Découvrez le musée",

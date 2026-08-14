@@ -26,3 +26,5 @@ export const MUSEUM_IMAGES = [
 ] as const
 
 export const REMERCIEMENTS_IMAGE = '/remerciements/remerciements.jpg' as const
+
+export const CONCERTS_STAGE_IMAGE = '/concerts/concert-stage.jpg' as const
