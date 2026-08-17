@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-secondary pt-20">
+    <main className="min-h-screen bg-secondary pt-20 pb-16 md:pb-24">
       <div className="max-w-screen-2xl px-4 md:px-12">
         <h1 className="text-3xl md:text-4xl font-medium text-primary mb-8">
           {t("privacy.title")}
@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
         <div className="space-y-8 text-primary/90 text-sm leading-relaxed">
           {/* Last updated */}
           <p className="text-primary/60 text-xs">
-            {t("privacy.lastUpdated")}: {language === "fr" ? "16 décembre 2025" : "December 16, 2025"}
+            {t("privacy.lastUpdated")}: {language === "fr" ? "14 août 2026" : "August 14, 2026"}
           </p>
 
           {/* Introduction */}
@@ -49,6 +49,18 @@ const PrivacyPolicy = () => {
               <li>{t("privacy.analytics.item3")}</li>
               <li>{t("privacy.analytics.item4")}</li>
             </ul>
+            <p className="mt-3">
+              {t("privacy.analytics.googleText")}{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-primary"
+              >
+                {t("privacy.analytics.googleLink")}
+              </a>
+              .
+            </p>
           </section>
 
           {/* Third Party */}

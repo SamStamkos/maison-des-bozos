@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
 
 const Navigation: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
 
   useEffect(() => {
     // Trigger animation on mount
@@ -22,9 +24,17 @@ const Navigation: React.FC = () => {
     >
       <div className="max-w-screen-2xl px-4 md:px-12 mx-auto">
         <div className="flex justify-between items-center py-4">
-          <div className="text-sm tracking-widest text-primary">
+          <Link
+            to="/"
+            onClick={() => {
+              if (location.pathname === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+            className="text-sm tracking-widest text-primary"
+          >
             {t("nav.title")}
-          </div>
+          </Link>
 
           <div className="flex space-x-12 text-sm">
             <div className="">

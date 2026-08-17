@@ -6,8 +6,10 @@
     "reserve": "Book your visit",
     "concerts": {
       "title": "Chez Bozo Concerts",
-      "description": "Discover our intimate acoustic concerts in a legendary venue steeped in history. Experience a unique musical experience in the heart of downtown Montreal! Check our calendar and…",
-      "button": "Book your tickets"
+      "titleLine1": "Chez Bozo",
+      "titleLine2": "Concerts",
+      "description": "Discover our intimate acoustic concerts in a legendary venue steeped in history. Experience a unique musical experience in the heart of downtown Montreal!",
+      "button": "Discover the lineup"
     },
     "musee": {
       "button": "Discover the Museum",
@@ -23,7 +25,7 @@
       "placeholder": "Your email address",
       "button": "Subscribe",
       "submitting": "Sending…",
-      "success": "Thanks! Check your inbox to confirm your subscription.",
+      "success": "Thanks! Check your inbox to confirm your subscription. If you haven't received anything, check your spam folder!",
       "error": "Something went wrong. Please try again."
     },
     "remerciements": {
@@ -36,10 +38,16 @@
       "viewTickets": "Book now"
     }
   },
+  "cookies": {
+    "message": "We use cookies for analytics to improve your experience.",
+    "learnMore": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
   "footer": {
     "email": "info@chezbozo.com",
     "address": "1208 Crescent St,\nMontreal, QC\nH3G 2A9",
-    "copyright": "© 2025 House of Bozos.",
+    "copyright": "House of Bozos.",
     "privacy": "Privacy Policy"
   },
   "privacy": {
@@ -51,7 +59,7 @@
     },
     "collection": {
       "title": "Personal Data Collection",
-      "text": "We do not collect any personally identifiable information when you browse our site. We do not use cookies to track your behavior or create user profiles."
+      "text": "We do not collect any personally identifiable information when you browse our site. Analytics cookies are only used if you accept them through our consent banner."
     },
     "analytics": {
       "title": "Website Analytics",
@@ -59,7 +67,9 @@
       "item1": "No cookies used",
       "item2": "No IP addresses stored",
       "item3": "No cross-site tracking",
-      "item4": "No personal data collected"
+      "item4": "No personal data collected",
+      "googleText": "With your consent, we also use Google Analytics, a service provided by Google LLC, to better understand how our site is used (pages visited, where visitors come from, device type). Google Analytics places cookies in your browser (notably \"_ga\") and the data collected may be processed on servers located outside Quebec, including in the United States. This service is only activated if you accept it through our consent banner, and you can withdraw your consent at any time by deleting the cookies from your browser. For more information, see",
+      "googleLink": "Google's Privacy Policy"
     },
     "thirdParty": {
       "title": "Third-Party Services",
@@ -67,7 +77,7 @@
     },
     "rights": {
       "title": "Your Rights",
-      "text": "Under Quebec's Law 25, you have the right to access, rectify, and delete your personal data. Since we do not collect personal data, these rights do not apply to our site."
+      "text": "Under Quebec's Law 25, you have the right to access, rectify, and delete your personal data, and to withdraw your consent to analytics cookies at any time. For any request, contact us at the address below."
     },
     "contact": {
       "title": "Contact Us",

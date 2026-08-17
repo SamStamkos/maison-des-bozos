@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import IntroSection from "../components/IntroSection";
 import ConcertsSection from "../components/ConcertsSection";
-import CarouselSection from "../components/CarouselSection";
+// import CarouselSection from "../components/CarouselSection";
 import MuseumSection from "../components/MuseumSection";
 import NewsletterSection from "../components/NewsletterSection";
 import DonationSection from "../components/DonationSection";
@@ -40,8 +40,11 @@ const Home: React.FC = () => {
     <main className="min-h-screen bg-secondary">
       <IntroSection />
       <ConcertsSection />
-      <CarouselSection />
-      <div className="md:relative md:z-10 md:-mt-[50vh]">
+      {/* Carousel paused — repeats the concerts imagery. To re-enable: restore the
+          import above and add md:-mt-[50vh] back to the MuseumSection wrapper below
+          (it pulls the museum up over the carousel's sticky parallax). */}
+      {/* <CarouselSection /> */}
+      <div className="md:relative md:z-10">
         <MuseumSection />
       </div>
       <DonationSection />

@@ -7,6 +7,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NewsletterConfirmation from "./pages/NewsletterConfirmation";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 import LoadingScreen from "./components/LoadingScreen";
 import SEO from "./components/SEO";
 import StructuredData from "./components/StructuredData";
@@ -60,6 +61,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
+          <CookieBanner />
         </div>
       )}
     </LanguageProvider>
