@@ -29,7 +29,9 @@
       "error": "Oups, une erreur s'est produite. Veuillez réessayer."
     },
     "remerciements": {
-      "alt": "Affiche de remerciements aux partenaires de la Maison des Bozos"
+      "title": "La Maison des Bozos remercie ses précieux partenaires",
+      "donor": "ainsi que Monsieur François Cantin, généreux donateur.",
+      "supports": "La Maison des Bozos soutient"
     }
   },
   "page": {
