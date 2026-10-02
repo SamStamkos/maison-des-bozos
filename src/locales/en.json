@@ -29,7 +29,9 @@
       "error": "Something went wrong. Please try again."
     },
     "remerciements": {
-      "alt": "Poster thanking the partners of la Maison des Bozos"
+      "title": "La Maison des Bozos thanks its valued partners",
+      "donor": "as well as Mr. François Cantin, generous donor.",
+      "supports": "La Maison des Bozos supports"
     }
   },
   "page": {
